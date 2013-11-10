@@ -8,6 +8,7 @@
 #import "MenuLayer.h"
 #import "Player.h"
 #import "BuildingManager.h"
+#import "GameoverScene.h"
 #import "InfoLayer.h"
 
 @interface MapScene()
@@ -49,7 +50,7 @@
     [self addChild:_infoLayer];
 }
 
--(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
+-(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
     [_menuLayer touchesBegan:touches withEvent:event];
 }
 
@@ -65,7 +66,9 @@
 
 -(void)update:(CFTimeInterval)currentTime {
     if ([[Player getPlayer] health]<0){//game over man, game over
-        self.backgroundColor = [SKColor redColor];
+        SKScene *gameoverScene = [[GameoverScene alloc] initWithSize:self.size];
+        SKTransition *transition = [SKTransition doorwayWithDuration:0.5];
+        [self.view presentScene:gameoverScene transition:transition];
     }
     [[EnemyManager getInstance] updateAll];
     [[BuildingManager getInstance] updateAll];
