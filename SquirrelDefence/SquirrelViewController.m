@@ -7,7 +7,7 @@
 //
 
 #import "SquirrelViewController.h"
-#import "SquirrelMyScene.h"
+#import "MapScene.h"
 
 @implementation SquirrelViewController
 
@@ -23,7 +23,7 @@
     skView.showsNodeCount = YES;
     
     // Create and configure the scene.
-    SKScene * scene = [SquirrelMyScene sceneWithSize:skView.bounds.size];
+    SKScene * scene = [MapScene sceneWithSize:skView.bounds.size];
     scene.scaleMode = SKSceneScaleModeAspectFill;
     
     // Present the scene.
