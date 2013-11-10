@@ -6,19 +6,33 @@
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
 <<<<<<< HEAD
+<<<<<<< HEAD
+	<string>404DD528-7C17-4249-96F8-515C199C7D53</string>
+=======
+	<string>09F9C7A1-C1FF-44BD-82B4-26A3C6383E9B</string>
+>>>>>>> 964745e25748707f7f6728e4baaa790a183c14f5
+=======
 	<string>27145652-8D7A-4041-9370-2AAF85866DF8</string>
 =======
 	<string>09F9C7A1-C1FF-44BD-82B4-26A3C6383E9B</string>
 >>>>>>> 708af25600c8a54706f67305eaa06b5aa4e3dd67
+>>>>>>> ce3274964cfeeccc3343ba315863df6808e216ac
 	<key>IDESourceControlProjectName</key>
 	<string>SquirrelDefence</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
 <<<<<<< HEAD
+<<<<<<< HEAD
+		<key>04461C77-D4BE-4C03-B321-16703E9F5704</key>
+=======
+		<key>89A85715-311D-4041-B6B8-7D44ED956607</key>
+>>>>>>> 964745e25748707f7f6728e4baaa790a183c14f5
+=======
 		<key>504C35EF-8639-423E-BADA-B3569DE0D438</key>
 =======
 		<key>89A85715-311D-4041-B6B8-7D44ED956607</key>
 >>>>>>> 708af25600c8a54706f67305eaa06b5aa4e3dd67
+>>>>>>> ce3274964cfeeccc3343ba315863df6808e216ac
 		<string>https://github.com/rgawdzik/SSTD.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
@@ -26,10 +40,17 @@
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
 <<<<<<< HEAD
+<<<<<<< HEAD
+		<key>04461C77-D4BE-4C03-B321-16703E9F5704</key>
+=======
+		<key>89A85715-311D-4041-B6B8-7D44ED956607</key>
+>>>>>>> 964745e25748707f7f6728e4baaa790a183c14f5
+=======
 		<key>504C35EF-8639-423E-BADA-B3569DE0D438</key>
 =======
 		<key>89A85715-311D-4041-B6B8-7D44ED956607</key>
 >>>>>>> 708af25600c8a54706f67305eaa06b5aa4e3dd67
+>>>>>>> ce3274964cfeeccc3343ba315863df6808e216ac
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -38,10 +59,17 @@
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
 <<<<<<< HEAD
+<<<<<<< HEAD
+	<string>04461C77-D4BE-4C03-B321-16703E9F5704</string>
+=======
+	<string>89A85715-311D-4041-B6B8-7D44ED956607</string>
+>>>>>>> 964745e25748707f7f6728e4baaa790a183c14f5
+=======
 	<string>504C35EF-8639-423E-BADA-B3569DE0D438</string>
 =======
 	<string>89A85715-311D-4041-B6B8-7D44ED956607</string>
 >>>>>>> 708af25600c8a54706f67305eaa06b5aa4e3dd67
+>>>>>>> ce3274964cfeeccc3343ba315863df6808e216ac
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
@@ -49,10 +77,17 @@
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
 <<<<<<< HEAD
+<<<<<<< HEAD
+			<string>04461C77-D4BE-4C03-B321-16703E9F5704</string>
+=======
+			<string>89A85715-311D-4041-B6B8-7D44ED956607</string>
+>>>>>>> 964745e25748707f7f6728e4baaa790a183c14f5
+=======
 			<string>504C35EF-8639-423E-BADA-B3569DE0D438</string>
 =======
 			<string>89A85715-311D-4041-B6B8-7D44ED956607</string>
 >>>>>>> 708af25600c8a54706f67305eaa06b5aa4e3dd67
+>>>>>>> ce3274964cfeeccc3343ba315863df6808e216ac
 			<key>IDESourceControlWCCName</key>
 			<string>SSTD</string>
 		</dict>
