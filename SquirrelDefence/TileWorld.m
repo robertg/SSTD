@@ -13,7 +13,7 @@
 static int MAP_HEIGHT=10;
 static int MAP_WIDTH=17;
 
-- (id)initWithMapfile:(NSString*)m {
+- (id)initWithMapfile:(NSString*)f {
 	if ((self = [super init])) {
 		SKTextureAtlas * worldTextures = [SKTextureAtlas atlasNamed:@"World1"];
 		_tiles = [NSMutableArray arrayWithCapacity:170];
