@@ -5,19 +5,31 @@
 	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
 	<false/>
 	<key>IDESourceControlProjectIdentifier</key>
+<<<<<<< HEAD
+	<string>27145652-8D7A-4041-9370-2AAF85866DF8</string>
+=======
 	<string>09F9C7A1-C1FF-44BD-82B4-26A3C6383E9B</string>
+>>>>>>> 708af25600c8a54706f67305eaa06b5aa4e3dd67
 	<key>IDESourceControlProjectName</key>
 	<string>SquirrelDefence</string>
 	<key>IDESourceControlProjectOriginsDictionary</key>
 	<dict>
+<<<<<<< HEAD
+		<key>504C35EF-8639-423E-BADA-B3569DE0D438</key>
+=======
 		<key>89A85715-311D-4041-B6B8-7D44ED956607</key>
+>>>>>>> 708af25600c8a54706f67305eaa06b5aa4e3dd67
 		<string>https://github.com/rgawdzik/SSTD.git</string>
 	</dict>
 	<key>IDESourceControlProjectPath</key>
 	<string>SquirrelDefence.xcodeproj/project.xcworkspace</string>
 	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
 	<dict>
+<<<<<<< HEAD
+		<key>504C35EF-8639-423E-BADA-B3569DE0D438</key>
+=======
 		<key>89A85715-311D-4041-B6B8-7D44ED956607</key>
+>>>>>>> 708af25600c8a54706f67305eaa06b5aa4e3dd67
 		<string>../..</string>
 	</dict>
 	<key>IDESourceControlProjectURL</key>
@@ -25,14 +37,22 @@
 	<key>IDESourceControlProjectVersion</key>
 	<integer>110</integer>
 	<key>IDESourceControlProjectWCCIdentifier</key>
+<<<<<<< HEAD
+	<string>504C35EF-8639-423E-BADA-B3569DE0D438</string>
+=======
 	<string>89A85715-311D-4041-B6B8-7D44ED956607</string>
+>>>>>>> 708af25600c8a54706f67305eaa06b5aa4e3dd67
 	<key>IDESourceControlProjectWCConfigurations</key>
 	<array>
 		<dict>
 			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
 			<string>public.vcs.git</string>
 			<key>IDESourceControlWCCIdentifierKey</key>
+<<<<<<< HEAD
+			<string>504C35EF-8639-423E-BADA-B3569DE0D438</string>
+=======
 			<string>89A85715-311D-4041-B6B8-7D44ED956607</string>
+>>>>>>> 708af25600c8a54706f67305eaa06b5aa4e3dd67
 			<key>IDESourceControlWCCName</key>
 			<string>SSTD</string>
 		</dict>
