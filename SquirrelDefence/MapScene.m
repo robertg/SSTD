@@ -16,10 +16,9 @@
 	TileWorld *_world;
     EnemyManager *_enemyManager;
 }
-
+/*
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
         //2
         NSLog(@"SKScene:initWithSize %f x %f",size.width,size.height);
         
@@ -27,14 +26,8 @@
         self.backgroundColor = [SKColor whiteColor];
         
 		_world = [[TileWorld alloc] initWithMapfile:@"World1"];
-		[self addChild:_world];
 
         //Create space sprite, setup position on left edge centered on the screen, and add to Scene
-        //4
-        _ship = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship.png"];
-
-        _ship.position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame));
-        
         //Defining the behaviours
 
         SKAction *remove = [SKAction removeFromParent];
@@ -54,6 +47,7 @@
     
     return self;
 }
+*/
     
 - (void)didMoveToView: (SKView *)view
 {
@@ -73,6 +67,14 @@
     
     _world = [[TileWorld alloc] initWithMapfile:@"World1"];
     [self addChild:_world];
+    
+    Enemy* e1 = [[Enemy alloc] init:0.01f type:1 pos: (CGPointMake(10, 10)) textureloc: @"Spaceship.png" ];
+    [self addChild:e1];
+    NSMutableArray* enemies = [[NSMutableArray alloc] initWithObjects:e1, nil];
+    
+    
+    _enemyManager = [[EnemyManager alloc] initPath:[self generatePath]
+                                           enemies: enemies width: self.frame.size.width height: self.frame.size.height framesWait: 20];
     
     [self generatePath];
 }
