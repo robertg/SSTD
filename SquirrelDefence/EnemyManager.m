@@ -1,10 +1,11 @@
-
 #import "EnemyManager.h"
 #import "Enemy.h"
 
 @implementation EnemyManager
+
+//Private Variables:
 {
-NSMutableArray* _path;
+    NSMutableArray* _path;
 }
 
 -(id) init:(NSMutableArray *)path {
