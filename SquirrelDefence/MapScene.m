@@ -42,8 +42,8 @@
     NSMutableArray* enemies = [[NSMutableArray alloc] initWithObjects:e1, nil];
     
     
-    _enemyManager = [[EnemyManager alloc] initPath:[self generatePath]
-                                           enemies: enemies width: self.frame.size.width height: self.frame.size.height framesWait: 20];
+    //_enemyManager = [[EnemyManager alloc] initPath:[self generatePath]
+    //                                       enemies: enemies width: self.frame.size.width height: self.frame.size.height framesWait: 20];
     
     [self generatePath];
     
@@ -116,7 +116,7 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    [_enemyManager updateAll];
+    //[_enemyManager updateAll];
 }
 
 //generatePath: Returns a randomly generated path (NSMutableArray) with MapLoc objects within.
