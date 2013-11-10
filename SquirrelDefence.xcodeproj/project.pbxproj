@@ -25,6 +25,7 @@
 		7BE7662D182EFEEB00309681 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BE7662B182EFEEB00309681 /* InfoPlist.strings */; };
 		7BE7662F182EFEEB00309681 /* SquirrelDefenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */; };
 		8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71C9F182F190D007CB572 /* MapLoc.m */; };
+		8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CCD182F3C7A007CB572 /* Enemy.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +64,8 @@
 		7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquirrelDefenceTests.m; sourceTree = "<group>"; };
 		8AD71C9E182F190D007CB572 /* MapLoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLoc.h; sourceTree = "<group>"; };
 		8AD71C9F182F190D007CB572 /* MapLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLoc.m; sourceTree = "<group>"; };
+		8AD71CCC182F3C7A007CB572 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		8AD71CCD182F3C7A007CB572 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -136,6 +139,8 @@
 				7BE76605182EFEEB00309681 /* Supporting Files */,
 				8AD71C9E182F190D007CB572 /* MapLoc.h */,
 				8AD71C9F182F190D007CB572 /* MapLoc.m */,
+				8AD71CCC182F3C7A007CB572 /* Enemy.h */,
+				8AD71CCD182F3C7A007CB572 /* Enemy.m */,
 			);
 			path = SquirrelDefence;
 			sourceTree = "<group>";
@@ -268,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */,
 				7BE7660B182EFEEB00309681 /* main.m in Sources */,
 				7BE7660F182EFEEB00309681 /* SquirrelAppDelegate.m in Sources */,
 				7BE76615182EFEEB00309681 /* SquirrelViewController.m in Sources */,
