@@ -3,11 +3,14 @@
 #import "MapScene.h"
 #import "TileWorld.h"
 #import "MapLoc.h"
+#import "EnemyManager.h"
 
 @implementation MapScene
+
 {
     SKSpriteNode *_ship;  //1
 	TileWorld *_world;
+    EnemyManager *_enemyManager;
 }
 
 -(id)initWithSize:(CGSize)size {
@@ -38,7 +41,7 @@
 
         SKAction *turnRight = [SKAction sequence:@[right]];
         
-        
+        _enemyManager = [[EnemyManager alloc] initPath:nil width: self.frame.size.width height: self.frame.size.height];
         
         [self generatePath];
     }

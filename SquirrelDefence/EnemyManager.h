@@ -16,8 +16,11 @@
 //Methods:
 
 //Constructor:
--(id) initPath: (NSMutableArray*)path;
+-(id) initPath: (NSMutableArray*)path
+         width: (int)width
+        height: (int)height;
 
--(void) createEnemy;
+-(void) addEnemies: (NSArray*)enemies;
+-(void) updateAll;
 
 @end
