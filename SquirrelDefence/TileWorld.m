@@ -17,15 +17,16 @@ static int MAP_WIDTH=17;
 	if ((self = [super init])) {
 		SKTextureAtlas * worldTextures = [SKTextureAtlas atlasNamed:@"World1"];
         
-        NSString * mapPath = [[NSBundle mainBundle] pathForResource:@"World1.txt" ofType:@"txt"];
-        NSString * map = [NSString stringWithContentsOfFile:mapPath usedEncoding:NSUTF8StringEncoding error:NULL];
+        NSError * err;
+        NSStringEncoding * enc;
+        NSString * mapPath = [[NSBundle mainBundle] pathForResource:@"World1" ofType:@"txt"];
+        NSString * map = [NSString stringWithContentsOfFile:mapPath usedEncoding:&enc error:&err];
         
 		_tiles = [NSMutableArray arrayWithCapacity:170];
 		Tile * tile;
 		for(int y=0;y<MAP_HEIGHT;y++){
 			for(int x=0;x<MAP_WIDTH;x++){
                 char t =[map characterAtIndex:y*(MAP_WIDTH+1)+x];
-                NSLog(@"%c",t);
 				if(t=='P'){
                     tile = [[PathTile alloc] initWithTexture:0 xpos:x ypos:y];
 					//[(PathTile*)tile setNextTile:(y*MAP_WIDTH +x+1)];//set next node to next in chain

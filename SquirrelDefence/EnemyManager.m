@@ -87,7 +87,7 @@
     if(index == -1) { //This is not supposed to happen!
         toFollow = [_path objectAtIndex:0];
     }
-    NSLog(@"Enemy X: %d Y: %d Next Pos: X: %d Y: %d", arb_x, arb_y, toFollow.X, toFollow.Y);
+    //NSLog(@"Enemy X: %d Y: %d Next Pos: X: %d Y: %d", arb_x, arb_y, toFollow.X, toFollow.Y);
     
     //We need to go straight.
     if(toFollow.X > arb_x) {
