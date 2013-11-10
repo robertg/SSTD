@@ -57,7 +57,6 @@ static EnemyManager * instance = nil;
         }
         _framesCounter = 0;
     }
-    
     for(int i = 0; i < [_Enemies count]; i++) {
         if (![(Enemy *)_Enemies[i] update:_path]){
             [self removeChildrenInArray:[NSArray arrayWithObject:_Enemies[i]]];
@@ -66,8 +65,26 @@ static EnemyManager * instance = nil;
         }
     }
 }
-
-- (Enemy *)getNearestEnemy{
-    return nil;
+- (double)getDistanceSquared:(CGPoint)p X:(double)x Y:(double)y{
+    return (p.x-x)*(p.x-x)+(p.y-y)*(p.y-y);
+}
+- (Enemy *)getNearestEnemyX:(double)x Y:(double)y dist:(double*)d{
+    if ([_Enemies count] <= 0) {
+        *d = INFINITY;
+        return nil;
+    }
+    Enemy * ret = _Enemies[0];
+    double distancesquared = [self getDistanceSquared:[_Enemies[0] position] X:x Y:y];
+    
+    for (int i=1; i<[_Enemies count]; i++) {
+        double tmp = [self getDistanceSquared:[_Enemies[i] position] X:x Y:y];
+        if (tmp<distancesquared){
+            ret = _Enemies[i];
+            distancesquared = tmp;
+        }
+    }
+    
+    *d = sqrt(distancesquared);
+    return ret;
 }
 @end

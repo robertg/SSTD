@@ -8,7 +8,7 @@
 
 #import "MenuLayer.h"
 #import "BuildingManager.h"
-#import "GenericAndUselessBuilding.h"
+#import "DFTurret.h"
 
 @implementation MenuLayer {
     CGPoint _previousTouchLocation;
@@ -127,7 +127,7 @@
         
         if (_dragging && shittyhackboolean) {
             SKSpriteNode *cloneItem = (SKSpriteNode *)[self childNodeWithName:@"cloneItem"];
-            [[BuildingManager getInstance] addBuilding:[[GenericAndUselessBuilding alloc] init]
+            [[BuildingManager getInstance] addBuilding:[[DFTurret alloc] init]
                                         X:floor(location.x/32)-3.0 Y:floor(location.y/32)];//Why do I need to subtract 3? I don't know either. Ask the phone.
             [self removeChildrenInArray:[NSArray arrayWithObject:cloneItem]];
             

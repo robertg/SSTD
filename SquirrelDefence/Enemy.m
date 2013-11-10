@@ -1,4 +1,5 @@
 #import "Enemy.h"
+#import "EnemyManager.h"
 #import "damage.h"
 #import "MapLoc.h"
 #import "Player.h"
@@ -27,7 +28,17 @@
 }
 -(BOOL)update:(NSMutableArray*)path{
     if (_health<0){//dead
-        //spawn corpse
+        [Player getPlayer].money+=100;
+        SKSpriteNode * corpse = [self copy];
+        corpse.zPosition = -1.0;
+        
+        SKAction *colorize = [SKAction colorizeWithColor:[SKColor blackColor] colorBlendFactor:0.7 duration:0.1];
+        SKAction *fadeAway = [SKAction fadeOutWithDuration:0.1];
+        SKAction *removeFromParent = [SKAction removeFromParent];
+        SKAction *group = [SKAction group:@[colorize, fadeAway]];
+        SKAction *sequence = [SKAction sequence:@[group, removeFromParent]];
+        [corpse runAction:sequence];
+        [[EnemyManager getInstance] addChild:corpse];
         return NO;
     }
     MapLoc * target = path[_pathpos];
@@ -37,7 +48,7 @@
     if(distSquared<(_speed*_speed)){//close enough to next waypoint, snap to it
         _pathpos++;
         if (_pathpos>=[path count]) {//end of path
-            [[Player getPlayer] setHealth:[Player getPlayer].health-5];
+            [Player getPlayer].health -=5;
             return NO;
         }
         self.position = CGPointMake(target.X*32.0+16.0, target.Y*32.0+16.0);
@@ -52,5 +63,9 @@
 }
 -(void)takeDamage:(int)damage type:(DamageType)type{
     _health-=damage;
+    SKAction *colorize = [SKAction colorizeWithColor:[SKColor redColor] colorBlendFactor:0.7 duration:0.2];
+    SKAction *decolorize = [SKAction colorizeWithColorBlendFactor:0.0 duration:0.2];
+    SKAction *sequence = [SKAction sequence:@[colorize, decolorize]];
+    [self runAction:sequence];
 }
 @end

@@ -17,7 +17,12 @@ static TileWorld * instance=nil;
     }
     return instance;
 }
-
+-(id)init{
+    if((self=[super init])){
+        self.zPosition = -10.0;
+    }
+    return self;
+}
 static int MAP_HEIGHT=10;
 static int MAP_WIDTH=17;
 
