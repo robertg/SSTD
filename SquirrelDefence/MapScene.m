@@ -16,10 +16,7 @@
 @implementation MapScene
 
 {
-	TileWorld *_world;
-    EnemyManager *_enemyManager;
     MenuLayer *_menuLayer;
-    BuildingManager *_buildingManager;
 }
     
 - (void)didMoveToView: (SKView *)view
@@ -35,25 +32,15 @@
     [Player getPlayer];
     self.backgroundColor = [SKColor whiteColor];
     
-    _world = [[TileWorld alloc] initWithMapfile:@"World1"];
-    [self addChild:_world];
+    [[TileWorld getInstance] loadMapfile:@"World1"];
+    [self addChild:[TileWorld getInstance]];
     
-    NSMutableArray * path = [_world generatePath];
+    [[EnemyManager getInstance] setEnemyPath:[[TileWorld getInstance] generatePath]];
+    [self addChild:[EnemyManager getInstance]];
     
-    MapLoc* loc = [path objectAtIndex:0];
-    Enemy* e1 = [[Enemy alloc] initWithSpeed:1.0f health:20 pos: CGPointMake(loc.X*32.0f,loc.Y*32.0f) textureloc: @"Spaceship.png" ];
-    [self addChild:e1];
+    [self addChild:[BuildingManager getInstance]];
     
-    _enemyManager = [[EnemyManager alloc] initPath:path
-                                             width: self.frame.size.width height: self.frame.size.height
-                     framesWait: 60];
-                     //framesWait: 20];
-    [self addChild:_enemyManager];
-    
-    _buildingManager = [[BuildingManager alloc] initWithWorld:_world];
-    [self addChild:_buildingManager];
-    
-    _menuLayer = [[MenuLayer alloc] initWithBuildingManager:_buildingManager];
+    _menuLayer = [[MenuLayer alloc] init];
     [self addChild:_menuLayer];
 }
 
@@ -75,7 +62,8 @@
     if ([[Player getPlayer] health]<0){//game over man, game over
         self.backgroundColor = [SKColor redColor];
     }
-    [_enemyManager updateAll];
+    [[EnemyManager getInstance] updateAll];
+    [[BuildingManager getInstance] updateAll];
 }
 
 @end

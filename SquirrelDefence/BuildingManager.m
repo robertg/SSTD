@@ -13,11 +13,16 @@
 
 @implementation BuildingManager{
     NSMutableArray * _buildings;
-    TileWorld * _world;
 }
-- (id)initWithWorld:(TileWorld *)world{
+static BuildingManager * instance = nil;
++(id) getInstance{
+    if (!instance){
+        instance = [[BuildingManager alloc] init];
+    }
+    return instance;
+}
+- (id)init{
     if ((self=[super init])){
-        _world = world;
         _buildings = [NSMutableArray array];
     }
     return self;
@@ -30,7 +35,7 @@
     
 }
 - (void)addBuilding:(Building *)b X:(int)x Y:(int)y{
-    Tile *t = [_world getTileX:x Y:y];
+    Tile *t = [[TileWorld getInstance] getTileX:x Y:y];
     if ([t isKindOfClass:[BuildTile class]]&&![(BuildTile*)t building]){
         [(BuildTile*)t setBuilding:b];
         [_buildings addObject:b];
@@ -39,7 +44,7 @@
     }
 }
 - (void)destroyBuildingX:(int)x Y:(int)y{
-    Tile *t = [_world getTileX:x Y:y];
+    Tile *t = [[TileWorld getInstance] getTileX:x Y:y];
     if ([t isKindOfClass:[BuildTile class]]){
         if ([(BuildTile*)t building]){
             

@@ -10,5 +10,4 @@
 #import "BuildingManager.h"
 
 @interface MenuLayer : SKNode
-- (id)initWithBuildingManager:(BuildingManager*)bm;
 @end

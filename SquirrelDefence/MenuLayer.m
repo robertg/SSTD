@@ -11,17 +11,15 @@
 #import "GenericAndUselessBuilding.h"
 
 @implementation MenuLayer {
-    BuildingManager * _buildingManager;
     CGPoint _previousTouchLocation;
     BOOL _menuOpen;
     BOOL _dragging;
     int _menuItemCount;
 }
 
-- (id)initWithBuildingManager:(BuildingManager*)bm
+- (id)init
 {
     if ((self = [super init])) {
-        _buildingManager = bm;
         
         SKShapeNode *menuBackground = [[SKShapeNode alloc] init];
         menuBackground.name = @"menuBackground";
@@ -129,7 +127,7 @@
         
         if (_dragging && shittyhackboolean) {
             SKSpriteNode *cloneItem = (SKSpriteNode *)[self childNodeWithName:@"cloneItem"];
-            [_buildingManager addBuilding:[[GenericAndUselessBuilding alloc] init]
+            [[BuildingManager getInstance] addBuilding:[[GenericAndUselessBuilding alloc] init]
                                         X:floor(location.x/32)-3.0 Y:floor(location.y/32)];//Why do I need to subtract 3? I don't know either. Ask the phone.
             [self removeChildrenInArray:[NSArray arrayWithObject:cloneItem]];
             

@@ -2,7 +2,8 @@
 #import "Tile.h"
 
 @interface TileWorld: SKNode
-- (id)initWithMapfile:(NSString*)f;
++ (id)getInstance;
+- (BOOL)loadMapfile:(NSString*)f;
 - (Tile *)getTileId:(int)x;
 - (Tile *)getTileX:(int)x
 	Y:(int)y;

@@ -8,20 +8,21 @@
 {
     NSMutableArray* _heldEnemies;
     NSMutableArray* _path;
-    int             _screen_width;
-    int             _screen_height;
     int             _framesWait;
     int             _framesCounter;
 }
-
--(id) initPath:(NSMutableArray *)path width:(int)width height:(int)height framesWait: (int)framesWait {
+static EnemyManager * instance = nil;
++(id) getInstance{
+    if (!instance){
+        instance = [[EnemyManager alloc] init];
+    }
+    return instance;
+}
+-(id) init{
     
     //Initialize local variables.
-    _path = path;
-    _screen_height = height;
-    _screen_width = width;
     _heldEnemies = [NSMutableArray array];
-    _framesWait = framesWait;
+    _framesWait = 60;
     _framesCounter = 0;
     
     if (self = [super init]) {
@@ -30,7 +31,9 @@
     
     return self;
 }
-
+-(void) setEnemyPath:(NSMutableArray *)p{
+    _path = p;
+}
 -(void) addEnemies: (NSArray*)enemies {
     [_Enemies addObjectsFromArray:enemies];
 }

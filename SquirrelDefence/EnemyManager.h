@@ -15,12 +15,8 @@
 @property NSMutableArray* Enemies;
 //Methods:
 
-//Constructor:
--(id) initPath: (NSMutableArray*)path
-         width: (int)width
-        height: (int)height
-    framesWait: (int)framesWait;
-
++(id) getInstance;
+-(void) setEnemyPath:(NSMutableArray*)p;
 -(void) addEnemies: (NSArray*)enemies;
 -(void) updateAll;
 

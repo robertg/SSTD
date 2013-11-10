@@ -11,7 +11,7 @@
 #import "Building.h"
 
 @interface BuildingManager : SKNode
-- (id)initWithWorld:(TileWorld*)world;
++ (id)getInstance;
 - (void)updateAll;
 - (void)addBuilding:(Building *)b
                   X:(int)x Y:(int)y;
