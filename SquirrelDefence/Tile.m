@@ -21,11 +21,19 @@
 @end
 
 @implementation BuildTile
+- (id)initWithTexture:(int)t
+    xpos:(int)x
+    ypos:(int)y{
+	if((self = [super initWithTexture:t xpos:x ypos:y])){
+		_building = nil;
+	}
+	return self;
+}
 - (NSString*)getTexName{
     return @"build";
 }
 - (BOOL) canBuildHere{
-    return Yes;//TODO: FIX THIS
+    return _building==nil;
 }
 @end
 

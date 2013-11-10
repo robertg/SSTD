@@ -11,7 +11,7 @@
 @end
 
 @interface BuildTile: Tile
-@property (weak) Building building;
+@property (weak) Building* building;
 @end
 
 @interface PathTile: Tile
