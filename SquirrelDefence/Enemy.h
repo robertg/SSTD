@@ -1,13 +1,16 @@
-//
-//  Enemy.h
-//  SquirrelDefence
-//
-//  Created by Robert Gawdzik on 11/9/2013.
-//  Copyright (c) 2013 Sinusoidal Squirrels. All rights reserved.
-//
-
 #import <SpriteKit/SpriteKit.h>
 
 @interface Enemy : SKSpriteNode
+
+//Enemy Properties:
+@property float Speed;
+@property CGPoint Position;
+@property int Enemy_type;
+@property SKTexture* Texture;
+
+-(id) init: (float) speed
+      type: (int)type
+      pos:  (CGPoint)position
+      textureloc: (NSString*)textloc;
 
 @end
