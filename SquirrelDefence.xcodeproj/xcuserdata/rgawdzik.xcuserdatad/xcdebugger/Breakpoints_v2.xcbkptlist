@@ -6,16 +6,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SquirrelDefence/MapScene.m"
-            timestampString = "405759748.410872"
+            timestampString = "405761176.955124"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "141"
-            endingLineNumber = "141"
-            landmarkName = "-initWithSize:"
+            startingLineNumber = "137"
+            endingLineNumber = "137"
+            landmarkName = "-generatePath"
             landmarkType = "5">
          </BreakpointContent>
       </BreakpointProxy>

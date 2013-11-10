@@ -18,7 +18,6 @@
     EnemyManager *_enemyManager;
 }
 
-<<<<<<< HEAD
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
@@ -51,16 +50,17 @@
         
          
         _enemyManager = [[EnemyManager alloc] initPath:[self generatePath]
-        enemies: enemies width: size.width height: size.height framesWait: 20];
-        
-        [self generatePath];
-=======
-- (void)didMoveToView:(SKView *)view
+                                               enemies: enemies width: size.width height: size.height framesWait: 20];
+    }
+    
+    return self;
+}
+    
+- (void)didMoveToView: (SKView *)view
 {
     if (!self.contentCreated) {
         [self createSceneContents];
         self.contentCreated = YES;
->>>>>>> 0ef556e2e416313f8bba0769578c7048f9292d11
     }
 }
 
@@ -114,11 +114,7 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-<<<<<<< HEAD
     [_enemyManager updateAll];
-=======
-    
->>>>>>> 0ef556e2e416313f8bba0769578c7048f9292d11
 }
 
 //generatePath: Returns a randomly generated path (NSMutableArray) with MapLoc objects within.
