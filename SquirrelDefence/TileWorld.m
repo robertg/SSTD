@@ -21,15 +21,14 @@ static int MAP_WIDTH=17;
 		for(int y=0;y<MAP_HEIGHT;y++){
 			for(int x=0;x<MAP_WIDTH;x++){
 				if(y==3){
-					tile = [[PathTile alloc] initWithTexture:[worldTextures textureNamed:@"path00"]
-							x: x y: y];
+                    tile = [[PathTile alloc] initWithTexture:[worldTextures textureNamed:@"path00"] xpos:x ypos:y];
 					[(PathTile*)tile setNextTile:(y*MAP_WIDTH +x+1)];//set next node to next in chain
 				} else {
 					tile = [[BuildTile alloc] initWithTexture:[worldTextures textureNamed:@"build00"]
-							x: x y: y];
+							xpos: x ypos: y];
 				}
-				[self addChild:tile]
-				[_tiles insertObject:tile atIndex:(y*MAP_WIDTH +x)]
+				[self addChild:tile];
+				[_tiles insertObject:tile atIndex:(y*MAP_WIDTH +x)];
 			}
 		}
 	}
