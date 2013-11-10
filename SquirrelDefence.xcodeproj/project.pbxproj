@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3940FAD7182F396300C74389 /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3940FAD6182F396300C74389 /* TitleScene.m */; };
+		3940FAE2182F6CC000C74389 /* tower_one_0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3940FAE0182F6CC000C74389 /* tower_one_0.gif */; };
+		3940FAE3182F6CC000C74389 /* tower_one_0@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3940FAE1182F6CC000C74389 /* tower_one_0@2x.gif */; };
 		7BE765FD182EFEEB00309681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FC182EFEEB00309681 /* Foundation.framework */; };
 		7BE765FF182EFEEB00309681 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FE182EFEEB00309681 /* CoreGraphics.framework */; };
 		7BE76601182EFEEB00309681 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE76600182EFEEB00309681 /* UIKit.framework */; };
@@ -46,6 +48,8 @@
 /* Begin PBXFileReference section */
 		3940FAD5182F396300C74389 /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
 		3940FAD6182F396300C74389 /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
+		3940FAE0182F6CC000C74389 /* tower_one_0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tower_one_0.gif; sourceTree = "<group>"; };
+		3940FAE1182F6CC000C74389 /* tower_one_0@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "tower_one_0@2x.gif"; sourceTree = "<group>"; };
 		7BE765F9182EFEEB00309681 /* SquirrelDefence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquirrelDefence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE765FC182EFEEB00309681 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BE765FE182EFEEB00309681 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -141,6 +145,8 @@
 		7BE76604182EFEEB00309681 /* SquirrelDefence */ = {
 			isa = PBXGroup;
 			children = (
+				3940FAE0182F6CC000C74389 /* tower_one_0.gif */,
+				3940FAE1182F6CC000C74389 /* tower_one_0@2x.gif */,
 				8AD71CD8182F4900007CB572 /* World1.atlas */,
 				8AD71CD2182F48F6007CB572 /* Tile.h */,
 				8AD71CD3182F48F6007CB572 /* Tile.m */,
@@ -274,9 +280,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3940FAE2182F6CC000C74389 /* tower_one_0.gif in Resources */,
 				7BE76609182EFEEB00309681 /* InfoPlist.strings in Resources */,
 				7BE7661C182EFEEB00309681 /* Images.xcassets in Resources */,
 				7BE7661A182EFEEB00309681 /* Spaceship.png in Resources */,
+				3940FAE3182F6CC000C74389 /* tower_one_0@2x.gif in Resources */,
 				8AD71CD9182F4900007CB572 /* World1.atlas in Resources */,
 				7BE76612182EFEEB00309681 /* Main.storyboard in Resources */,
 			);
