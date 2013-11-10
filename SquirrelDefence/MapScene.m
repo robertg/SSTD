@@ -37,16 +37,6 @@
     _world = [[TileWorld alloc] initWithMapfile:@"World1"];
     [self addChild:_world];
     
-    Enemy* e1 = [[Enemy alloc] init:0.01f type:1 pos: (CGPointMake(10, 10)) textureloc: @"Spaceship.png" ];
-    [self addChild:e1];
-    NSMutableArray* enemies = [[NSMutableArray alloc] initWithObjects:e1, nil];
-    
-    
-    _enemyManager = [[EnemyManager alloc] initPath:[self generatePath]
-                                           enemies: enemies width: self.frame.size.width height: self.frame.size.height framesWait: 20];
-    
-    [self generatePath];
-    
     SKShapeNode *menuBackground = [[SKShapeNode alloc] init];
     menuBackground.name = @"menuBackground";
     
@@ -70,6 +60,15 @@
     tower.position = CGPointMake(menuBackground.frame.size.width / 2, menuBackground.frame.size.height - tower.frame.size.height);
     
     [menuBackground addChild:tower];
+    
+    Enemy* e1 = [[Enemy alloc] initWithSpeed:1.0f type:1 pos: CGPointMake(100, 100) textureloc: @"Spaceship.png" ];
+    [self addChild:e1];
+    
+    NSMutableArray* enemies = [[NSMutableArray alloc] initWithObjects:e1, nil];
+    
+    
+    _enemyManager = [[EnemyManager alloc] initPath:[self generatePath]
+                                           enemies: enemies width: self.frame.size.width height: self.frame.size.height framesWait: 20];
     
     [self addChild:menuBackground];
 }

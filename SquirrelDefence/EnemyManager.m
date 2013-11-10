@@ -52,13 +52,14 @@
     for(int i = 0; i < [_Enemies count]; i++) {
         Enemy* currentEnemy = [_Enemies objectAtIndex:i];
         int nextMove = [self nextMove:currentEnemy];
+        //NSLog(@"Next Move:")
         
         if(nextMove == 0) {
-            currentEnemy.position = CGPointMake(currentEnemy.position.x + currentEnemy.Speed, currentEnemy.position.y);
+            currentEnemy.position = CGPointMake(currentEnemy.position.x + currentEnemy.speed, currentEnemy.position.y);
         } else if(nextMove == 1) {
-            currentEnemy.position = CGPointMake(currentEnemy.position.x, currentEnemy.position.y + currentEnemy.Speed);
+            currentEnemy.position = CGPointMake(currentEnemy.position.x, currentEnemy.position.y + currentEnemy.speed);
         } else {
-            currentEnemy.position = CGPointMake(currentEnemy.position.x, currentEnemy.position.y - currentEnemy.Speed);
+            currentEnemy.position = CGPointMake(currentEnemy.position.x, currentEnemy.position.y - currentEnemy.speed);
         }
     }
 }
