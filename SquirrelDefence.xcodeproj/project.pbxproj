@@ -10,6 +10,7 @@
 		3940FAD7182F396300C74389 /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3940FAD6182F396300C74389 /* TitleScene.m */; };
 		3940FAE2182F6CC000C74389 /* tower_one_0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3940FAE0182F6CC000C74389 /* tower_one_0.gif */; };
 		3940FAE3182F6CC000C74389 /* tower_one_0@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3940FAE1182F6CC000C74389 /* tower_one_0@2x.gif */; };
+		3940FAE6182FA8EC00C74389 /* MenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3940FAE5182FA8EC00C74389 /* MenuLayer.m */; };
 		7BA76D9C182F88A6008F18A9 /* World1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7BA76D9B182F88A6008F18A9 /* World1.txt */; };
 		7BA76DA0182F9B4E008F18A9 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76D9F182F9B4E008F18A9 /* Building.m */; };
 		7BE765FD182EFEEB00309681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FC182EFEEB00309681 /* Foundation.framework */; };
@@ -52,6 +53,8 @@
 		3940FAD6182F396300C74389 /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
 		3940FAE0182F6CC000C74389 /* tower_one_0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tower_one_0.gif; sourceTree = "<group>"; };
 		3940FAE1182F6CC000C74389 /* tower_one_0@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "tower_one_0@2x.gif"; sourceTree = "<group>"; };
+		3940FAE4182FA8EC00C74389 /* MenuLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuLayer.h; sourceTree = "<group>"; };
+		3940FAE5182FA8EC00C74389 /* MenuLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuLayer.m; sourceTree = "<group>"; };
 		7BA76D9B182F88A6008F18A9 /* World1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = World1.txt; sourceTree = "<group>"; };
 		7BA76D9D182F9518008F18A9 /* damage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = damage.h; sourceTree = "<group>"; };
 		7BA76D9E182F9B4E008F18A9 /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
@@ -166,6 +169,8 @@
 				7BE76614182EFEEB00309681 /* SquirrelViewController.m */,
 				7BE76616182EFEEB00309681 /* MapScene.h */,
 				7BE76617182EFEEB00309681 /* MapScene.m */,
+				3940FAE4182FA8EC00C74389 /* MenuLayer.h */,
+				3940FAE5182FA8EC00C74389 /* MenuLayer.m */,
 				3940FAD5182F396300C74389 /* TitleScene.h */,
 				3940FAD6182F396300C74389 /* TitleScene.m */,
 				7BE76619182EFEEB00309681 /* Spaceship.png */,
@@ -320,6 +325,7 @@
 				8AD71CD6182F48F6007CB572 /* Tile.m in Sources */,
 				7BA76DA0182F9B4E008F18A9 /* Building.m in Sources */,
 				8AD71CD7182F48F6007CB572 /* TileWorld.m in Sources */,
+				3940FAE6182FA8EC00C74389 /* MenuLayer.m in Sources */,
 				7BE7660B182EFEEB00309681 /* main.m in Sources */,
 				7BE7660F182EFEEB00309681 /* SquirrelAppDelegate.m in Sources */,
 				7BE76615182EFEEB00309681 /* SquirrelViewController.m in Sources */,
