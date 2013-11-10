@@ -22,7 +22,7 @@ static EnemyManager * instance = nil;
     
     //Initialize local variables.
     _heldEnemies = [NSMutableArray array];
-    _framesWait = 60;
+    _framesWait = 80;
     _framesCounter = 0;
     
     if (self = [super init]) {
@@ -42,11 +42,22 @@ static EnemyManager * instance = nil;
 }
 
 -(void) updateAll {
-    if (_framesCounter==0){//shitty addition
+    if (_framesCounter<=0){//shitty addition
+        Enemy* e1;
         MapLoc* loc = [_path objectAtIndex:0];
-        Enemy* e1 = [[Enemy alloc] initWithSpeed:1.0f health:20 pos: CGPointMake(loc.X*32.0+16.0,loc.Y*32.0+16.0) textureloc: @"Spaceship.png" ];
+        
+        if(_framesWait > 40) {
+            _framesWait *= 0.925;
+            e1 = [[Enemy alloc] initWithSpeed:1.0f health:20 pos: CGPointMake(loc.X*32.0+16.0,loc.Y*32.0+16.0) textureloc: @"Spaceship.png" ];
+        }
+        else {
+            e1 = [[Enemy alloc] initWithSpeed:1.0f health:40 pos: CGPointMake(loc.X*32.0+16.0,loc.Y*32.0+16.0) textureloc: @"Spaceship.png" ];
+        }
+        
         [_Enemies addObject:e1];
         [self addChild:e1];
+        
+            
     }
     _framesCounter++;
     
