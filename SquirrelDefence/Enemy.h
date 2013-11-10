@@ -4,7 +4,7 @@
 
 //Enemy Properties:
 @property float Speed;
-@property CGPoint Position;
+//
 @property int Enemy_type;
 @property SKTexture* Texture;
 
