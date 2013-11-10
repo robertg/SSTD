@@ -38,7 +38,7 @@
 -(void) updateAll {
     if (_framesCounter==0){//shitty addition
         MapLoc* loc = [_path objectAtIndex:0];
-        Enemy* e1 = [[Enemy alloc] initWithSpeed:1.0f health:20 pos: CGPointMake(loc.X*32.0f,loc.Y*32.0f) textureloc: @"Spaceship.png" ];
+        Enemy* e1 = [[Enemy alloc] initWithSpeed:1.0f health:20 pos: CGPointMake(loc.X*32.0+16.0,loc.Y*32.0+16.0) textureloc: @"Spaceship.png" ];
         [_Enemies addObject:e1];
         [self addChild:e1];
     }
@@ -57,9 +57,14 @@
     
     for(int i = 0; i < [_Enemies count]; i++) {
         if (![(Enemy *)_Enemies[i] update:_path]){
+            [self removeChildrenInArray:[NSArray arrayWithObject:_Enemies[i]]];
             [_Enemies removeObjectAtIndex:i];
             i--;
         }
     }
+}
+
+- (Enemy *)getNearestEnemy{
+    return nil;
 }
 @end

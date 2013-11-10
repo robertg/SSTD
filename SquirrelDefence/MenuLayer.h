@@ -7,7 +7,8 @@
 //
 
 #import <SpriteKit/SpriteKit.h>
+#import "BuildingManager.h"
 
 @interface MenuLayer : SKNode
-
+- (id)initWithBuildingManager:(BuildingManager*)bm;
 @end

@@ -22,7 +22,7 @@ static Player *instance = nil;
     return instance;
 }
 - (id)init{
-    if((self==[super init])){
+    if((self=[super init])){
         self.money = 0;
         self.health = 100;
     }

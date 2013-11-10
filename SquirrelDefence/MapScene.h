@@ -12,9 +12,3 @@
 
 
 @end
-
-@interface Units : NSObject
-
-@property BOOL *alive;
-
-@end

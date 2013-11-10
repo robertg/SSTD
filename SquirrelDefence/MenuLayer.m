@@ -7,17 +7,22 @@
 //
 
 #import "MenuLayer.h"
+#import "BuildingManager.h"
+#import "GenericAndUselessBuilding.h"
 
 @implementation MenuLayer {
+    BuildingManager * _buildingManager;
     CGPoint _previousTouchLocation;
     BOOL _menuOpen;
     BOOL _dragging;
     int _menuItemCount;
 }
 
-- (id)init
+- (id)initWithBuildingManager:(BuildingManager*)bm
 {
     if ((self = [super init])) {
+        _buildingManager = bm;
+        
         SKShapeNode *menuBackground = [[SKShapeNode alloc] init];
         menuBackground.name = @"menuBackground";
         
@@ -39,8 +44,6 @@
         
         NSArray *menuItems = [NSArray arrayWithObjects:
                               [SKSpriteNode spriteNodeWithImageNamed:@"tower_one_0.gif"],
-                              [SKSpriteNode spriteNodeWithImageNamed:@"tower_one_0.gif"],
-                              [SKSpriteNode spriteNodeWithImageNamed:@"tower_one_0.gif"],
                               nil];
         
         [self addChild:menuBackground];
@@ -49,6 +52,7 @@
             SKSpriteNode *item = (SKSpriteNode *)[menuItems objectAtIndex:i];
             item.name = [NSString stringWithFormat:@"menuItem%d", i];
             item.anchorPoint = CGPointMake(0.0, 0.0);
+            item.size = CGSizeMake(48.0, 48.0);
             item.position = CGPointMake(menuBackground.frame.size.width / 2 - item.frame.size.width / 2, menuBackground.frame.size.height - ((i+2) * item.frame.size.height));
             [self addChild:item];
         }
@@ -74,6 +78,8 @@
                 
                 SKSpriteNode *cloneItem = [item copy];
                 cloneItem.name = @"cloneItem";
+                cloneItem.size = CGSizeMake(32.0, 32.0);
+                cloneItem.anchorPoint = CGPointMake(0.5, 0.5);
                 [self addChild:cloneItem];
                 
                 _dragging = YES;
@@ -92,7 +98,7 @@
         
         if (_dragging) {
             SKSpriteNode *cloneItem = (SKSpriteNode *)[self childNodeWithName:@"cloneItem"];
-            cloneItem.position = CGPointMake(32 * floor(location.x / 32), 32 * floor(location.y / 32));
+            cloneItem.position = CGPointMake(32 * floor(location.x / 32)+16.0, 32 * floor(location.y / 32)+16.0);
             return;
         }
         
@@ -117,15 +123,20 @@
 
 - (void)touchesEnded:(NSSet *)touches withEvent:(UIEvent *)event
 {
-    if (_dragging) {
-        SKSpriteNode *cloneItem = (SKSpriteNode *)[self childNodeWithName:@"cloneItem"];
-        cloneItem.name = nil;
-        _dragging = NO;
-        return;
-    }
-    
+    BOOL shittyhackboolean = YES;
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
+        
+        if (_dragging && shittyhackboolean) {
+            SKSpriteNode *cloneItem = (SKSpriteNode *)[self childNodeWithName:@"cloneItem"];
+            [_buildingManager addBuilding:[[GenericAndUselessBuilding alloc] init]
+                                        X:floor(location.x/32)-3.0 Y:floor(location.y/32)];//Why do I need to subtract 3? I don't know either. Ask the phone.
+            [self removeChildrenInArray:[NSArray arrayWithObject:cloneItem]];
+            
+            _dragging = NO;
+            shittyhackboolean = NO;
+            return;
+        }
         
         SKShapeNode *menuBackground = (SKShapeNode *)self;
         

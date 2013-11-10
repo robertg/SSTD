@@ -9,5 +9,13 @@
 #import "Building.h"
 
 @implementation Building
-
+- (id)init{
+    if ((self=[super init])){
+        
+    }
+    return self;
+}
+- (void)update{
+    
+}
 @end

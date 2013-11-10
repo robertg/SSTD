@@ -14,6 +14,9 @@
 		7BA76D9C182F88A6008F18A9 /* World1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7BA76D9B182F88A6008F18A9 /* World1.txt */; };
 		7BA76DA0182F9B4E008F18A9 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76D9F182F9B4E008F18A9 /* Building.m */; };
 		7BA76DA3182FD097008F18A9 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76DA2182FD097008F18A9 /* Player.m */; };
+		7BA76DA6182FD927008F18A9 /* BuildingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76DA5182FD927008F18A9 /* BuildingManager.m */; };
+		7BA76DA9182FE039008F18A9 /* GenericAndUselessBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76DA8182FE039008F18A9 /* GenericAndUselessBuilding.m */; };
+		7BA76DAC182FF5D1008F18A9 /* DFTurret.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76DAB182FF5D1008F18A9 /* DFTurret.m */; };
 		7BE765FD182EFEEB00309681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FC182EFEEB00309681 /* Foundation.framework */; };
 		7BE765FF182EFEEB00309681 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FE182EFEEB00309681 /* CoreGraphics.framework */; };
 		7BE76601182EFEEB00309681 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE76600182EFEEB00309681 /* UIKit.framework */; };
@@ -62,6 +65,12 @@
 		7BA76D9F182F9B4E008F18A9 /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
 		7BA76DA1182FD097008F18A9 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
 		7BA76DA2182FD097008F18A9 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
+		7BA76DA4182FD927008F18A9 /* BuildingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BuildingManager.h; sourceTree = "<group>"; };
+		7BA76DA5182FD927008F18A9 /* BuildingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BuildingManager.m; sourceTree = "<group>"; };
+		7BA76DA7182FE039008F18A9 /* GenericAndUselessBuilding.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GenericAndUselessBuilding.h; sourceTree = "<group>"; };
+		7BA76DA8182FE039008F18A9 /* GenericAndUselessBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericAndUselessBuilding.m; sourceTree = "<group>"; };
+		7BA76DAA182FF5D1008F18A9 /* DFTurret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFTurret.h; sourceTree = "<group>"; };
+		7BA76DAB182FF5D1008F18A9 /* DFTurret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFTurret.m; sourceTree = "<group>"; };
 		7BE765F9182EFEEB00309681 /* SquirrelDefence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquirrelDefence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE765FC182EFEEB00309681 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BE765FE182EFEEB00309681 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -123,6 +132,19 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7BA76DAD182FF5EC008F18A9 /* Buildings */ = {
+			isa = PBXGroup;
+			children = (
+				7BA76D9E182F9B4E008F18A9 /* Building.h */,
+				7BA76D9F182F9B4E008F18A9 /* Building.m */,
+				7BA76DA7182FE039008F18A9 /* GenericAndUselessBuilding.h */,
+				7BA76DA8182FE039008F18A9 /* GenericAndUselessBuilding.m */,
+				7BA76DAA182FF5D1008F18A9 /* DFTurret.h */,
+				7BA76DAB182FF5D1008F18A9 /* DFTurret.m */,
+			);
+			name = Buildings;
+			sourceTree = "<group>";
+		};
 		7BE765F0182EFEEB00309681 = {
 			isa = PBXGroup;
 			children = (
@@ -157,6 +179,7 @@
 		7BE76604182EFEEB00309681 /* SquirrelDefence */ = {
 			isa = PBXGroup;
 			children = (
+				7BA76DAD182FF5EC008F18A9 /* Buildings */,
 				7BA76D9B182F88A6008F18A9 /* World1.txt */,
 				3940FAE0182F6CC000C74389 /* tower_one_0.gif */,
 				3940FAE1182F6CC000C74389 /* tower_one_0@2x.gif */,
@@ -186,10 +209,10 @@
 				8AD71CCF182F3DC9007CB572 /* EnemyManager.h */,
 				8AD71CD0182F3DC9007CB572 /* EnemyManager.m */,
 				7BA76D9D182F9518008F18A9 /* damage.h */,
-				7BA76D9E182F9B4E008F18A9 /* Building.h */,
-				7BA76D9F182F9B4E008F18A9 /* Building.m */,
 				7BA76DA1182FD097008F18A9 /* Player.h */,
 				7BA76DA2182FD097008F18A9 /* Player.m */,
+				7BA76DA4182FD927008F18A9 /* BuildingManager.h */,
+				7BA76DA5182FD927008F18A9 /* BuildingManager.m */,
 			);
 			path = SquirrelDefence;
 			sourceTree = "<group>";
@@ -327,9 +350,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */,
+				7BA76DA6182FD927008F18A9 /* BuildingManager.m in Sources */,
 				8AD71CD6182F48F6007CB572 /* Tile.m in Sources */,
 				7BA76DA0182F9B4E008F18A9 /* Building.m in Sources */,
 				7BA76DA3182FD097008F18A9 /* Player.m in Sources */,
+				7BA76DAC182FF5D1008F18A9 /* DFTurret.m in Sources */,
 				8AD71CD7182F48F6007CB572 /* TileWorld.m in Sources */,
 				3940FAE6182FA8EC00C74389 /* MenuLayer.m in Sources */,
 				7BE7660B182EFEEB00309681 /* main.m in Sources */,
@@ -339,6 +364,7 @@
 				7BE76618182EFEEB00309681 /* MapScene.m in Sources */,
 				8AD71CD1182F3DC9007CB572 /* EnemyManager.m in Sources */,
 				8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */,
+				7BA76DA9182FE039008F18A9 /* GenericAndUselessBuilding.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
