@@ -477,6 +477,7 @@
 				7BE76634182EFEEB00309681 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7BE76635182EFEEB00309681 /* Build configuration list for PBXNativeTarget "SquirrelDefenceTests" */ = {
 			isa = XCConfigurationList;
@@ -485,6 +486,7 @@
 				7BE76637182EFEEB00309681 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
