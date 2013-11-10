@@ -7,22 +7,17 @@
 //
 
 #import <Foundation/Foundation.h>
-#import <SpriteKit/SpriteKit.h>
 
 @interface EnemyManager : NSObject
 
 //Properties:
 @property NSMutableArray* Enemies;
+
 //Methods:
 
 //Constructor:
--(id) initPath: (NSMutableArray*)path
-       enemies: (NSMutableArray*)enemies
-         width: (int)width
-        height: (int)height
-    framesWait: (int)framesWait;
+-(id) initPath: (NSMutableArray*)path;
 
--(void) addEnemies: (NSArray*)enemies;
--(void) updateAll;
+-(void) createEnemy;
 
 @end

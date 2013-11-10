@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		3940FAD7182F396300C74389 /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3940FAD6182F396300C74389 /* TitleScene.m */; };
+		3940FAE2182F6CC000C74389 /* tower_one_0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3940FAE0182F6CC000C74389 /* tower_one_0.gif */; };
+		3940FAE3182F6CC000C74389 /* tower_one_0@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3940FAE1182F6CC000C74389 /* tower_one_0@2x.gif */; };
 		7BE765FD182EFEEB00309681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FC182EFEEB00309681 /* Foundation.framework */; };
 		7BE765FF182EFEEB00309681 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FE182EFEEB00309681 /* CoreGraphics.framework */; };
 		7BE76601182EFEEB00309681 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE76600182EFEEB00309681 /* UIKit.framework */; };
@@ -25,8 +27,6 @@
 		7BE76625182EFEEB00309681 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE76600182EFEEB00309681 /* UIKit.framework */; };
 		7BE7662D182EFEEB00309681 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BE7662B182EFEEB00309681 /* InfoPlist.strings */; };
 		7BE7662F182EFEEB00309681 /* SquirrelDefenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */; };
-		7BE76654182F543900309681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FC182EFEEB00309681 /* Foundation.framework */; };
-		7BE7665F182F555F00309681 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CD3182F48F6007CB572 /* Tile.m */; };
 		8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71C9F182F190D007CB572 /* MapLoc.m */; };
 		8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CCD182F3C7A007CB572 /* Enemy.m */; };
 		8AD71CD1182F3DC9007CB572 /* EnemyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CD0182F3DC9007CB572 /* EnemyManager.m */; };
@@ -45,21 +45,11 @@
 		};
 /* End PBXContainerItemProxy section */
 
-/* Begin PBXCopyFilesBuildPhase section */
-		7BE76651182F543900309681 /* CopyFiles */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = /usr/share/man/man1/;
-			dstSubfolderSpec = 0;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 1;
-		};
-/* End PBXCopyFilesBuildPhase section */
-
 /* Begin PBXFileReference section */
 		3940FAD5182F396300C74389 /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
 		3940FAD6182F396300C74389 /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
+		3940FAE0182F6CC000C74389 /* tower_one_0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tower_one_0.gif; sourceTree = "<group>"; };
+		3940FAE1182F6CC000C74389 /* tower_one_0@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "tower_one_0@2x.gif"; sourceTree = "<group>"; };
 		7BE765F9182EFEEB00309681 /* SquirrelDefence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquirrelDefence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE765FC182EFEEB00309681 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BE765FE182EFEEB00309681 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -83,7 +73,6 @@
 		7BE7662A182EFEEB00309681 /* SquirrelDefenceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SquirrelDefenceTests-Info.plist"; sourceTree = "<group>"; };
 		7BE7662C182EFEEB00309681 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquirrelDefenceTests.m; sourceTree = "<group>"; };
-		7BE76653182F543900309681 /* LevelGen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LevelGen; sourceTree = BUILT_PRODUCTS_DIR; };
 		8AD71C9E182F190D007CB572 /* MapLoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLoc.h; sourceTree = "<group>"; };
 		8AD71C9F182F190D007CB572 /* MapLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLoc.m; sourceTree = "<group>"; };
 		8AD71CCC182F3C7A007CB572 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
@@ -119,14 +108,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		7BE76650182F543900309681 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7BE76654182F543900309681 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -145,7 +126,6 @@
 			children = (
 				7BE765F9182EFEEB00309681 /* SquirrelDefence.app */,
 				7BE76621182EFEEB00309681 /* SquirrelDefenceTests.xctest */,
-				7BE76653182F543900309681 /* LevelGen */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -165,6 +145,8 @@
 		7BE76604182EFEEB00309681 /* SquirrelDefence */ = {
 			isa = PBXGroup;
 			children = (
+				3940FAE0182F6CC000C74389 /* tower_one_0.gif */,
+				3940FAE1182F6CC000C74389 /* tower_one_0@2x.gif */,
 				8AD71CD8182F4900007CB572 /* World1.atlas */,
 				8AD71CD2182F48F6007CB572 /* Tile.h */,
 				8AD71CD3182F48F6007CB572 /* Tile.m */,
@@ -259,23 +241,6 @@
 			productReference = 7BE76621182EFEEB00309681 /* SquirrelDefenceTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		7BE76652182F543900309681 /* LevelGen */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = 7BE7665C182F543900309681 /* Build configuration list for PBXNativeTarget "LevelGen" */;
-			buildPhases = (
-				7BE7664F182F543900309681 /* Sources */,
-				7BE76650182F543900309681 /* Frameworks */,
-				7BE76651182F543900309681 /* CopyFiles */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LevelGen;
-			productName = LevelGen;
-			productReference = 7BE76653182F543900309681 /* LevelGen */;
-			productType = "com.apple.product-type.tool";
-		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -306,7 +271,6 @@
 			targets = (
 				7BE765F8182EFEEB00309681 /* SquirrelDefence */,
 				7BE76620182EFEEB00309681 /* SquirrelDefenceTests */,
-				7BE76652182F543900309681 /* LevelGen */,
 			);
 		};
 /* End PBXProject section */
@@ -316,9 +280,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3940FAE2182F6CC000C74389 /* tower_one_0.gif in Resources */,
 				7BE76609182EFEEB00309681 /* InfoPlist.strings in Resources */,
 				7BE7661C182EFEEB00309681 /* Images.xcassets in Resources */,
 				7BE7661A182EFEEB00309681 /* Spaceship.png in Resources */,
+				3940FAE3182F6CC000C74389 /* tower_one_0@2x.gif in Resources */,
 				8AD71CD9182F4900007CB572 /* World1.atlas in Resources */,
 				7BE76612182EFEEB00309681 /* Main.storyboard in Resources */,
 			);
@@ -357,14 +323,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7BE7662F182EFEEB00309681 /* SquirrelDefenceTests.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		7BE7664F182F543900309681 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				7BE7665F182F555F00309681 /* Tile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,35 +506,6 @@
 			};
 			name = Release;
 		};
-		7BE7665D182F543900309681 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LevelGen/LevelGen-Prefix.pch";
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"DEBUG=1",
-					"$(inherited)",
-				);
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Debug;
-		};
-		7BE7665E182F543900309681 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
-				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "LevelGen/LevelGen-Prefix.pch";
-				MACOSX_DEPLOYMENT_TARGET = 10.9;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SDKROOT = macosx;
-			};
-			name = Release;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -603,15 +532,6 @@
 			buildConfigurations = (
 				7BE76636182EFEEB00309681 /* Debug */,
 				7BE76637182EFEEB00309681 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		7BE7665C182F543900309681 /* Build configuration list for PBXNativeTarget "LevelGen" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				7BE7665D182F543900309681 /* Debug */,
-				7BE7665E182F543900309681 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

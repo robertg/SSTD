@@ -4,13 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>LevelGen.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-			<key>orderHint</key>
-			<integer>1</integer>
-		</dict>
 		<key>SquirrelDefence.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -25,16 +18,6 @@
 			<true/>
 		</dict>
 		<key>7BE76620182EFEEB00309681</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7BE76645182F539700309681</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>7BE76652182F543900309681</key>
 		<dict>
 			<key>primary</key>
 			<true/>
