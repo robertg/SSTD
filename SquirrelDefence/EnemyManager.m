@@ -52,7 +52,6 @@
     for(int i = 0; i < [_Enemies count]; i++) {
         Enemy* currentEnemy = [_Enemies objectAtIndex:i];
         int nextMove = [self nextMove:currentEnemy];
-        //NSLog(@"Next Move:")
         
         if(nextMove == 0) {
             currentEnemy.position = CGPointMake(currentEnemy.position.x + currentEnemy.speed, currentEnemy.position.y);
@@ -70,8 +69,8 @@
 //1: UP
 //2: DOWN
 -(int) nextMove: (Enemy*) enemy {
-    int arb_x = ceil(enemy.position.x / _screen_width);
-    int arb_y = ceil(enemy.position.y / _screen_height);
+    int arb_x = floor((enemy.position.x / _screen_width) * 17);
+    int arb_y = floor((enemy.position.y / _screen_height) * 10);
     
     //Let's find this on the map!
     MapLoc* toFollow;
@@ -82,21 +81,21 @@
             if(i + 1 < [_path count]) {
                 index = i;
                 toFollow = [_path objectAtIndex:(i + 1)];
-            } else {
-                //We don't have anything in the future, it's just the exit to worry about. So we go right.
-                return 0;
             }
         }
     }
     if(index == -1) { //This is not supposed to happen!
-        return 0;
+        toFollow = [_path objectAtIndex:0];
     }
+    NSLog(@"Enemy X: %d Y: %d Next Pos: X: %d Y: %d", arb_x, arb_y, toFollow.X, toFollow.Y);
     
     //We need to go straight.
     if(toFollow.X > arb_x) {
         return 0;
     } else if(toFollow.Y > arb_y) { //We need to go up.
         return 1;
+    } else if(toFollow.Y == arb_y) {
+        return 0;
     } else { //We will go down.
         return 2;
     }
