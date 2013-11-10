@@ -9,6 +9,7 @@
 #import <SpriteKit/SpriteKit.h>
 #import "TileWorld.h"
 #import "Building.h"
+#import "Player.h"
 
 @interface BuildingManager : SKNode
 + (id)getInstance;

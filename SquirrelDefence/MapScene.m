@@ -9,6 +9,7 @@
 #import "Player.h"
 #import "BuildingManager.h"
 #import "GameoverScene.h"
+#import "InfoLayer.h"
 
 @interface MapScene()
 @property BOOL contentCreated;
@@ -18,6 +19,7 @@
 
 {
     MenuLayer *_menuLayer;
+    InfoLayer *_infoLayer;
 }
     
 - (void)didMoveToView: (SKView *)view
@@ -42,7 +44,10 @@
     [self addChild:[BuildingManager getInstance]];
     
     _menuLayer = [[MenuLayer alloc] init];
+    _infoLayer = [[InfoLayer alloc] init];
+    _infoLayer.position = CGPointMake(self.frame.size.width/2 - _infoLayer.frame.size.width/2, 10);
     [self addChild:_menuLayer];
+    [self addChild:_infoLayer];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -67,6 +72,9 @@
     }
     [[EnemyManager getInstance] updateAll];
     [[BuildingManager getInstance] updateAll];
+    //Get the player.
+    [_infoLayer update:[Player getPlayer]];
+    
 }
 
 @end
