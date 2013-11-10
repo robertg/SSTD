@@ -28,7 +28,7 @@
 }
 -(BOOL)update:(NSMutableArray*)path{
     if (_health<0){//dead
-        [Player getPlayer].money+=100;
+        [Player getPlayer].money+=25;
         SKSpriteNode * corpse = [self copy];
         corpse.zPosition = -1.0;
         
