@@ -16,7 +16,7 @@
 		7BE7660F182EFEEB00309681 /* SquirrelAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7660E182EFEEB00309681 /* SquirrelAppDelegate.m */; };
 		7BE76612182EFEEB00309681 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7BE76610182EFEEB00309681 /* Main.storyboard */; };
 		7BE76615182EFEEB00309681 /* SquirrelViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE76614182EFEEB00309681 /* SquirrelViewController.m */; };
-		7BE76618182EFEEB00309681 /* SquirrelMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE76617182EFEEB00309681 /* SquirrelMyScene.m */; };
+		7BE76618182EFEEB00309681 /* MapScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE76617182EFEEB00309681 /* MapScene.m */; };
 		7BE7661A182EFEEB00309681 /* Spaceship.png in Resources */ = {isa = PBXBuildFile; fileRef = 7BE76619182EFEEB00309681 /* Spaceship.png */; };
 		7BE7661C182EFEEB00309681 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7BE7661B182EFEEB00309681 /* Images.xcassets */; };
 		7BE76623182EFEEB00309681 /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE76622182EFEEB00309681 /* XCTest.framework */; };
@@ -24,6 +24,8 @@
 		7BE76625182EFEEB00309681 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE76600182EFEEB00309681 /* UIKit.framework */; };
 		7BE7662D182EFEEB00309681 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BE7662B182EFEEB00309681 /* InfoPlist.strings */; };
 		7BE7662F182EFEEB00309681 /* SquirrelDefenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */; };
+		7BE7663C182F32D200309681 /* SquirrelMyScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7663B182F32D200309681 /* SquirrelMyScene.m */; };
+		8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71C9F182F190D007CB572 /* MapLoc.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,8 +53,8 @@
 		7BE76611182EFEEB00309681 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7BE76613182EFEEB00309681 /* SquirrelViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquirrelViewController.h; sourceTree = "<group>"; };
 		7BE76614182EFEEB00309681 /* SquirrelViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquirrelViewController.m; sourceTree = "<group>"; };
-		7BE76616182EFEEB00309681 /* SquirrelMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquirrelMyScene.h; sourceTree = "<group>"; };
-		7BE76617182EFEEB00309681 /* SquirrelMyScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquirrelMyScene.m; sourceTree = "<group>"; };
+		7BE76616182EFEEB00309681 /* MapScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MapScene.h; sourceTree = "<group>"; };
+		7BE76617182EFEEB00309681 /* MapScene.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MapScene.m; sourceTree = "<group>"; };
 		7BE76619182EFEEB00309681 /* Spaceship.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Spaceship.png; sourceTree = "<group>"; };
 		7BE7661B182EFEEB00309681 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		7BE76621182EFEEB00309681 /* SquirrelDefenceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SquirrelDefenceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -60,6 +62,10 @@
 		7BE7662A182EFEEB00309681 /* SquirrelDefenceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SquirrelDefenceTests-Info.plist"; sourceTree = "<group>"; };
 		7BE7662C182EFEEB00309681 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquirrelDefenceTests.m; sourceTree = "<group>"; };
+		7BE7663B182F32D200309681 /* SquirrelMyScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SquirrelMyScene.m; sourceTree = "<group>"; };
+		7BE7663D182F32EE00309681 /* SquirrelMyScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SquirrelMyScene.h; sourceTree = "<group>"; };
+		8AD71C9E182F190D007CB572 /* MapLoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLoc.h; sourceTree = "<group>"; };
+		8AD71C9F182F190D007CB572 /* MapLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLoc.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,13 +130,17 @@
 				7BE7660D182EFEEB00309681 /* SquirrelAppDelegate.h */,
 				7BE7660E182EFEEB00309681 /* SquirrelAppDelegate.m */,
 				7BE76610182EFEEB00309681 /* Main.storyboard */,
+				7BE7663D182F32EE00309681 /* SquirrelMyScene.h */,
+				7BE7663B182F32D200309681 /* SquirrelMyScene.m */,
 				7BE76613182EFEEB00309681 /* SquirrelViewController.h */,
 				7BE76614182EFEEB00309681 /* SquirrelViewController.m */,
-				7BE76616182EFEEB00309681 /* SquirrelMyScene.h */,
-				7BE76617182EFEEB00309681 /* SquirrelMyScene.m */,
+				7BE76616182EFEEB00309681 /* MapScene.h */,
+				7BE76617182EFEEB00309681 /* MapScene.m */,
 				7BE76619182EFEEB00309681 /* Spaceship.png */,
 				7BE7661B182EFEEB00309681 /* Images.xcassets */,
 				7BE76605182EFEEB00309681 /* Supporting Files */,
+				8AD71C9E182F190D007CB572 /* MapLoc.h */,
+				8AD71C9F182F190D007CB572 /* MapLoc.m */,
 			);
 			path = SquirrelDefence;
 			sourceTree = "<group>";
@@ -266,7 +276,9 @@
 				7BE7660B182EFEEB00309681 /* main.m in Sources */,
 				7BE7660F182EFEEB00309681 /* SquirrelAppDelegate.m in Sources */,
 				7BE76615182EFEEB00309681 /* SquirrelViewController.m in Sources */,
-				7BE76618182EFEEB00309681 /* SquirrelMyScene.m in Sources */,
+				7BE76618182EFEEB00309681 /* MapScene.m in Sources */,
+				8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */,
+				7BE7663C182F32D200309681 /* SquirrelMyScene.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
