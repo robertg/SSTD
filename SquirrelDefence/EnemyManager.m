@@ -6,17 +6,23 @@
 
 //Private Variables:
 {
+    NSMutableArray* _heldEnemies;
     NSMutableArray* _path;
     int             _screen_width;
     int             _screen_height;
+    int             _framesWait;
+    int             _framesCounter;
 }
 
--(id) initPath:(NSMutableArray *)path width:(int)width height:(int)height{
+-(id) initPath:(NSMutableArray *)path enemies:(NSMutableArray*)enemies width:(int)width height:(int)height framesWait: (int)framesWait {
     
     //Initialize local variables.
     _path = path;
     _screen_height = height;
     _screen_width = width;
+    _heldEnemies = enemies;
+    _framesWait = framesWait;
+    _framesCounter = 0;
     
     if (self = [super init]) {
         _Enemies = [[NSMutableArray alloc] init];
@@ -30,6 +36,19 @@
 }
 
 -(void) updateAll {
+    _framesCounter++;
+    
+    //Add an enemy.
+    if(_framesCounter >= _framesWait) {
+        if([_heldEnemies count] > 0) {
+            //Add the object to the super enemy class.
+            [_Enemies addObject:[_heldEnemies objectAtIndex:0]];
+            //Make sure it's not held anymore:
+            [_heldEnemies removeObjectAtIndex:0];
+        }
+        _framesCounter = 0;
+    }
+    
     for(int i = 0; i < [_Enemies count]; i++) {
         Enemy* currentEnemy = [_Enemies objectAtIndex:i];
         int nextMove = [self nextMove:currentEnemy];

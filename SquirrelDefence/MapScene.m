@@ -4,6 +4,7 @@
 #import "TileWorld.h"
 #import "MapLoc.h"
 #import "EnemyManager.h"
+#import "Enemy.h"
 
 @implementation MapScene
 
@@ -31,8 +32,6 @@
 
         _ship.position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame));
         
-        
-
         //Defining the behaviours
 
         SKAction *remove = [SKAction removeFromParent];
@@ -41,7 +40,13 @@
 
         SKAction *turnRight = [SKAction sequence:@[right]];
         
-        _enemyManager = [[EnemyManager alloc] initPath:nil width: self.frame.size.width height: self.frame.size.height];
+        Enemy* e1 = [[Enemy alloc] init:0.01f type:1 pos: (CGPointMake(10, 10)) textureloc: @"Spaceship.png" ];
+        [self addChild:e1];
+        NSMutableArray* enemies = [[NSMutableArray alloc] initWithObjects:e1, nil];
+        
+         
+        _enemyManager = [[EnemyManager alloc] initPath:[self generatePath]
+        enemies: enemies width: size.width height: size.height framesWait: 20];
         
         [self generatePath];
     }
@@ -66,7 +71,7 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+    [_enemyManager updateAll];
 }
 
 //generatePath: Returns a randomly generated path (NSMutableArray) with MapLoc objects within.
