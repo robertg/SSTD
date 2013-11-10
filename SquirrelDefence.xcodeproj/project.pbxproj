@@ -26,6 +26,7 @@
 		7BE7662F182EFEEB00309681 /* SquirrelDefenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */; };
 		8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71C9F182F190D007CB572 /* MapLoc.m */; };
 		8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CCD182F3C7A007CB572 /* Enemy.m */; };
+		8AD71CD1182F3DC9007CB572 /* EnemyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CD0182F3DC9007CB572 /* EnemyManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +67,8 @@
 		8AD71C9F182F190D007CB572 /* MapLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLoc.m; sourceTree = "<group>"; };
 		8AD71CCC182F3C7A007CB572 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
 		8AD71CCD182F3C7A007CB572 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		8AD71CCF182F3DC9007CB572 /* EnemyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyManager.h; sourceTree = "<group>"; };
+		8AD71CD0182F3DC9007CB572 /* EnemyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,6 +144,8 @@
 				8AD71C9F182F190D007CB572 /* MapLoc.m */,
 				8AD71CCC182F3C7A007CB572 /* Enemy.h */,
 				8AD71CCD182F3C7A007CB572 /* Enemy.m */,
+				8AD71CCF182F3DC9007CB572 /* EnemyManager.h */,
+				8AD71CD0182F3DC9007CB572 /* EnemyManager.m */,
 			);
 			path = SquirrelDefence;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				7BE7660F182EFEEB00309681 /* SquirrelAppDelegate.m in Sources */,
 				7BE76615182EFEEB00309681 /* SquirrelViewController.m in Sources */,
 				7BE76618182EFEEB00309681 /* MapScene.m in Sources */,
+				8AD71CD1182F3DC9007CB572 /* EnemyManager.m in Sources */,
 				8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
