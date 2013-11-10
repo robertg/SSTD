@@ -14,6 +14,6 @@
 @property int Y;
 
 -(id)initX: (int)X
-     initY: (int)Y;
+     Y: (int)Y;
 
 @end

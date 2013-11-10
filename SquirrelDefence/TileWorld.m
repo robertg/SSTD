@@ -1,5 +1,6 @@
 #import "TileWorld.h"
 #import "Tile.h"
+#import "MapLoc.h"
 
 @interface TileWorld ()
 
@@ -15,13 +16,13 @@ static int MAP_WIDTH=17;
 
 - (id)initWithMapfile:(NSString*)f {
 	if ((self = [super init])) {
-		SKTextureAtlas * worldTextures = [SKTextureAtlas atlasNamed:@"World1"];
+		SKTextureAtlas * worldTextures = [SKTextureAtlas atlasNamed:f];
         
-        NSStringEncoding * enc;
-        NSString * mapPath = [[NSBundle mainBundle] pathForResource:@"World1" ofType:@"txt"];
+        NSStringEncoding * enc = nil;
+        NSString * mapPath = [[NSBundle mainBundle] pathForResource:f ofType:@"txt"];
         NSString * map = [NSString stringWithContentsOfFile:mapPath usedEncoding:enc error:NULL];
         
-		_tiles = [NSMutableArray arrayWithCapacity:171];
+		_tiles = [NSMutableArray arrayWithCapacity:172];
 		Tile * tile;
 		for(int y=0;y<MAP_HEIGHT;y++){
 			for(int x=0;x<MAP_WIDTH;x++){
@@ -40,7 +41,9 @@ static int MAP_WIDTH=17;
 			}
 		}
         tile = [[PathTile alloc] initWithTexture:[worldTextures textureNamed:@"path00"] xpos:17 ypos:8 nextid:-1];
-        [_tiles insertObject:tile atIndex:170];
+        [_tiles insertObject:tile atIndex:170];//End tile
+        tile = [[PathTile alloc] initWithTexture:[worldTextures textureNamed:@"path00"] xpos:0 ypos:-1 nextid:0];
+        [_tiles insertObject:tile atIndex:171];//Start tile
 	}
 	return self;
 }	
@@ -50,5 +53,15 @@ static int MAP_WIDTH=17;
 - (Tile *)getTileX:(int)x
 	Y:(int)y{
 	return _tiles[y*MAP_WIDTH +x];
+}
+- (NSMutableArray*)generatePath{//builds an unoptimized path of maplocs
+    NSMutableArray * ret = [NSMutableArray array];
+    PathTile * t = _tiles[171];
+    while (t.nextTile!=-1){
+        [ret addObject:[[MapLoc alloc]initX:t.x Y:t.y]];
+        t = _tiles[t.nextTile];
+    }
+    [ret addObject:[[MapLoc alloc]initX:t.x Y:t.y]];
+    return ret;
 }
 @end

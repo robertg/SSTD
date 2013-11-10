@@ -1,7 +1,9 @@
 #import <SpriteKit/SpriteKit.h>
 #import "Tile.h"
 
-@implementation Tile
+@implementation Tile{}
+@synthesize x = _x;
+@synthesize y = _y;
 - (id)initWithTexture:(SKTexture*)texture
     xpos:(int)x
 	ypos:(int)y{
@@ -9,11 +11,10 @@
     if((self = [super initWithTexture:texture color:[SKColor whiteColor] size:CGSizeMake(32.0, 32.0)])){
         self.anchorPoint = CGPointMake(0.0,0.0);
         self.position = CGPointMake(x*32.0,y*32.0);
+        self->_x = x;//UGLY!!!!!
+        self->_y = y;
 	}
 	return self;
-}
-- (NSString*)getTexName{
-    return @"none";
 }
 - (BOOL) canBuildHere{
     return NO;
@@ -28,9 +29,6 @@
 		_building = nil;
 	}
 	return self;
-}
-- (NSString*)getTexName{
-    return @"build";
 }
 - (BOOL) canBuildHere{
     return _building==nil;
@@ -54,9 +52,6 @@
 		_nextTile = nid;
 	}
 	return self;
-}
-- (NSString*)getTexName{
-    return @"path";
 }
 - (BOOL) canBuildHere{
     return NO;

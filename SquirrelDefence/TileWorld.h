@@ -6,4 +6,5 @@
 - (Tile *)getTileId:(int)x;
 - (Tile *)getTileX:(int)x
 	Y:(int)y;
+-(NSMutableArray*)generatePath;
 @end

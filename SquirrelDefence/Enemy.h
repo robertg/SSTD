@@ -1,14 +1,12 @@
 #import <SpriteKit/SpriteKit.h>
 #import "damage.h"
 
-@interface Enemy : SKSpriteNode {
-    float _speed;
-    int _health;
-}
+@interface Enemy : SKSpriteNode 
 
 //Enemy Properties:
 @property float speed;
 @property int health;
+
 
 -(id) initWithSpeed: (float) speed
       health: (int)health
@@ -18,6 +16,6 @@
 -(void) takeDamage: (int) damage
               type: (DamageType) type;
 
--(void) update;
+-(BOOL) update:(NSMutableArray*)path;
 
 @end

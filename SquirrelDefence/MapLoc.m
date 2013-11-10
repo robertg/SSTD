@@ -14,7 +14,7 @@
 //initMapLoc: (int x, int y): Takes in two numbers, X, and Y, and stores them into it's property.
 //
 -(id)initX: (int)x_param
-     initY: (int)y_param {
+     Y: (int)y_param {
     if ((self = [super init])) {
         _X = x_param;
         _Y = y_param;

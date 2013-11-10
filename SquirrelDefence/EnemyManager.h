@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
 
-@interface EnemyManager : NSObject
+@interface EnemyManager : SKNode
 
 //Properties:
 @property NSMutableArray* Enemies;
@@ -17,7 +17,6 @@
 
 //Constructor:
 -(id) initPath: (NSMutableArray*)path
-       enemies: (NSMutableArray*)enemies
          width: (int)width
         height: (int)height
     framesWait: (int)framesWait;

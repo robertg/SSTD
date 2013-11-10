@@ -13,6 +13,7 @@
 		3940FAE6182FA8EC00C74389 /* MenuLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 3940FAE5182FA8EC00C74389 /* MenuLayer.m */; };
 		7BA76D9C182F88A6008F18A9 /* World1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7BA76D9B182F88A6008F18A9 /* World1.txt */; };
 		7BA76DA0182F9B4E008F18A9 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76D9F182F9B4E008F18A9 /* Building.m */; };
+		7BA76DA3182FD097008F18A9 /* Player.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76DA2182FD097008F18A9 /* Player.m */; };
 		7BE765FD182EFEEB00309681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FC182EFEEB00309681 /* Foundation.framework */; };
 		7BE765FF182EFEEB00309681 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FE182EFEEB00309681 /* CoreGraphics.framework */; };
 		7BE76601182EFEEB00309681 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE76600182EFEEB00309681 /* UIKit.framework */; };
@@ -59,6 +60,8 @@
 		7BA76D9D182F9518008F18A9 /* damage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = damage.h; sourceTree = "<group>"; };
 		7BA76D9E182F9B4E008F18A9 /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
 		7BA76D9F182F9B4E008F18A9 /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
+		7BA76DA1182FD097008F18A9 /* Player.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Player.h; sourceTree = "<group>"; };
+		7BA76DA2182FD097008F18A9 /* Player.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Player.m; sourceTree = "<group>"; };
 		7BE765F9182EFEEB00309681 /* SquirrelDefence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquirrelDefence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE765FC182EFEEB00309681 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BE765FE182EFEEB00309681 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -185,6 +188,8 @@
 				7BA76D9D182F9518008F18A9 /* damage.h */,
 				7BA76D9E182F9B4E008F18A9 /* Building.h */,
 				7BA76D9F182F9B4E008F18A9 /* Building.m */,
+				7BA76DA1182FD097008F18A9 /* Player.h */,
+				7BA76DA2182FD097008F18A9 /* Player.m */,
 			);
 			path = SquirrelDefence;
 			sourceTree = "<group>";
@@ -324,6 +329,7 @@
 				8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */,
 				8AD71CD6182F48F6007CB572 /* Tile.m in Sources */,
 				7BA76DA0182F9B4E008F18A9 /* Building.m in Sources */,
+				7BA76DA3182FD097008F18A9 /* Player.m in Sources */,
 				8AD71CD7182F48F6007CB572 /* TileWorld.m in Sources */,
 				3940FAE6182FA8EC00C74389 /* MenuLayer.m in Sources */,
 				7BE7660B182EFEEB00309681 /* main.m in Sources */,

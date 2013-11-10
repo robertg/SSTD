@@ -1,11 +1,15 @@
 #import <SpriteKit/SpriteKit.h>
 #import "Building.h"
 
-@interface Tile: SKSpriteNode
+@interface Tile: SKSpriteNode{
+    int _x;
+    int _y;
+}
 - (id)initWithTexture:(SKTexture*)texture
 	xpos:(int)x
 	ypos:(int)y;
-- (NSString*) getTexName;
+@property (readonly) int x;
+@property (readonly) int y;
 - (BOOL) canBuildHere;
 @end
 
