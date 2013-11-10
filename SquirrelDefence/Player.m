@@ -28,5 +28,8 @@ static Player *instance = nil;
     }
     return self;
 }
+- (void)destroy {
+    instance = nil;
+}
 
 @end

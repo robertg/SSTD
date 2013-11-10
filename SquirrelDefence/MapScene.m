@@ -20,6 +20,7 @@
 {
     MenuLayer *_menuLayer;
     InfoLayer *_infoLayer;
+    BOOL _dead;
 }
     
 - (void)didMoveToView: (SKView *)view
@@ -48,6 +49,8 @@
     _infoLayer.position = CGPointMake(self.frame.size.width/2 - _infoLayer.frame.size.width/2, 10);
     [self addChild:_menuLayer];
     [self addChild:_infoLayer];
+    
+    _dead = NO;
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event{
@@ -65,10 +68,16 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    if ([[Player getPlayer] health]<0){//game over man, game over
-        SKScene *gameoverScene = [[GameoverScene alloc] initWithSize:self.size];
-        SKTransition *transition = [SKTransition doorwayWithDuration:0.5];
-        [self.view presentScene:gameoverScene transition:transition];
+    if ([[Player getPlayer] health]<=0){//game over man, game over
+        if (!_dead) {
+            _dead = YES;
+            [[Player getPlayer] destroy];
+            [[EnemyManager getInstance] destroy];
+            [[BuildingManager getInstance] destroy];
+            SKScene *gameoverScene = [[GameoverScene alloc] initWithSize:self.size];
+            SKTransition *transition = [SKTransition doorwayWithDuration:0.5];
+            [self.view presentScene:gameoverScene transition:transition];
+        }
     }
     [[EnemyManager getInstance] updateAll];
     [[BuildingManager getInstance] updateAll];

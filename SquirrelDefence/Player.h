@@ -10,6 +10,7 @@
 
 @interface Player : NSObject
 + (Player*)getPlayer;
+- (void)destroy;
 @property (readwrite) int health;
 @property (readwrite) int money;
 @end

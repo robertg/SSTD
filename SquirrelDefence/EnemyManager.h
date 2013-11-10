@@ -21,4 +21,5 @@
 -(void) addEnemies: (NSArray*)enemies;
 -(void) updateAll;
 -(Enemy *) getNearestEnemyX:(double)x Y:(double)y dist:(double*)d;
+- (void)destroy;
 @end

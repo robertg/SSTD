@@ -17,5 +17,6 @@
 - (void)addBuilding:(Building *)b
                   X:(int)x Y:(int)y;
 - (void)destroyBuildingX:(int)x Y:(int)y;
+- (void)destroy;
 
 @end

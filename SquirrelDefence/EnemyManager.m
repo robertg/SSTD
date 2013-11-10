@@ -31,6 +31,9 @@ static EnemyManager * instance = nil;
     
     return self;
 }
+- (void)destroy {
+    instance = nil;
+}
 -(void) setEnemyPath:(NSMutableArray *)p{
     _path = p;
 }

@@ -27,6 +27,9 @@ static BuildingManager * instance = nil;
     }
     return self;
 }
+- (void)destroy {
+    instance = nil;
+}
 
 - (void)updateAll{
     for (int i=0;i<[_buildings count];i++){
