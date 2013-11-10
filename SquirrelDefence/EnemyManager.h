@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <SpriteKit/SpriteKit.h>
+#import "Enemy.h"
 
 @interface EnemyManager : SKNode
 
@@ -19,5 +20,5 @@
 -(void) setEnemyPath:(NSMutableArray*)p;
 -(void) addEnemies: (NSArray*)enemies;
 -(void) updateAll;
-
+-(Enemy *) getNearestEnemyX:(double)x Y:(double)y dist:(double*)d;
 @end
