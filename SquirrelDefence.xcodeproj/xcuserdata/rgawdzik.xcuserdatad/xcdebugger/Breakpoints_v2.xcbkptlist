@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SquirrelDefence/MapScene.m"
-            timestampString = "405745618.826192"
+            timestampString = "405746991.993249"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "74"
-            endingLineNumber = "74"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "-generatePath"
             landmarkType = "5">
          </BreakpointContent>
