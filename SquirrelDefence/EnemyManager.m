@@ -1,20 +1,15 @@
-//
-//  EnemyManager.m
-//  SquirrelDefence
-//
-//  Created by Robert Gawdzik on 11/9/2013.
-//  Copyright (c) 2013 Sinusoidal Squirrels. All rights reserved.
-//
 
 #import "EnemyManager.h"
+#import "Enemy.h"
 
 @implementation EnemyManager
-
-NSMutableArray* Path;
+{
+NSMutableArray* _path;
+}
 
 -(id) init:(NSMutableArray *)path {
     
-    Path = path;
+    _path = path;
     if (self = [super init]) {
         _Enemies = [[NSMutableArray alloc] init];
     }
@@ -23,9 +18,7 @@ NSMutableArray* Path;
 }
 
 -(void) createEnemy {
-    [_Enemies addObject:[]];
-    
+    [_Enemies addObject:[[Enemy alloc] init]];
 }
-
 
 @end
