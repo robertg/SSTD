@@ -3,73 +3,75 @@
 #import "MapScene.h"
 #import "TileWorld.h"
 #import "MapLoc.h"
+#import "EnemyManager.h"
+#import "Enemy.h"
+
+@interface MapScene()
+@property BOOL contentCreated;
+@end
 
 @implementation MapScene
+
 {
-    SKSpriteNode *_ship;  //1
 	TileWorld *_world;
     CGPoint _previousTouchLocation;
+    EnemyManager *_enemyManager;
+}
+    
+- (void)didMoveToView: (SKView *)view
+{
+    if (!self.contentCreated) {
+        [self createSceneContents];
+        self.contentCreated = YES;
+    }
 }
 
--(id)initWithSize:(CGSize)size {
-    if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
-        //2
-        NSLog(@"SKScene:initWithSize %f x %f",size.width,size.height);
-        
-        //3
-        self.backgroundColor = [SKColor whiteColor];
-        
-		_world = [[TileWorld alloc] initWithMapfile:@"World1"];
-		[self addChild:_world];
-
-        //Create space sprite, setup position on left edge centered on the screen, and add to Scene
-        //4
-        _ship = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship.png"];
-
-        _ship.position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame));
-        
-        
-
-        //Defining the behaviours
-
-        SKAction *remove = [SKAction removeFromParent];
-        SKAction *zoom = [SKAction scaleTo: 0.1 duration: 0.10];
-        SKAction *right = [SKAction rotateByAngle:-M_PI/2 duration:0.5];
-
-        SKAction *turnRight = [SKAction sequence:@[right]];
-        
-        
-        
-        [self generatePath];
-        
-        SKShapeNode *menuBackground = [[SKShapeNode alloc] init];
-        menuBackground.name = @"menuBackground";
-        
-        CGMutablePathRef myPath = CGPathCreateMutable();
-        CGPathAddRect(myPath, NULL, CGRectMake(0.0, 0.0, 100.0, 320.0));
-        menuBackground.path = myPath;
-        
-        menuBackground.lineWidth = 0.0;
-        menuBackground.fillColor = [SKColor grayColor];
-        menuBackground.strokeColor = [SKColor clearColor];
-        menuBackground.glowWidth = 0.0;
-        menuBackground.alpha = 0.5;
-        
-        SKAction *wait = [SKAction waitForDuration:1.0];
-        SKAction *snapToLeft = [SKAction moveToX:-100.0 duration:0.25];
-        SKAction *sequence = [SKAction sequence:@[wait, snapToLeft]];
-        [menuBackground runAction:sequence];
-        
-        SKSpriteNode *tower = [SKSpriteNode spriteNodeWithImageNamed:@"tower_one_0.gif"];
-        
-        tower.position = CGPointMake(menuBackground.frame.size.width / 2, menuBackground.frame.size.height - tower.frame.size.height);
-        
-        [menuBackground addChild:tower];
-        
-        [self addChild:menuBackground];
-    }
-    return self;
+- (void)createSceneContents
+{
+    /* Setup your scene here */
+    //2
+    
+    //3
+    self.backgroundColor = [SKColor whiteColor];
+    
+    _world = [[TileWorld alloc] initWithMapfile:@"World1"];
+    [self addChild:_world];
+    
+    Enemy* e1 = [[Enemy alloc] init:0.01f type:1 pos: (CGPointMake(10, 10)) textureloc: @"Spaceship.png" ];
+    [self addChild:e1];
+    NSMutableArray* enemies = [[NSMutableArray alloc] initWithObjects:e1, nil];
+    
+    
+    _enemyManager = [[EnemyManager alloc] initPath:[self generatePath]
+                                           enemies: enemies width: self.frame.size.width height: self.frame.size.height framesWait: 20];
+    
+    [self generatePath];
+    
+    SKShapeNode *menuBackground = [[SKShapeNode alloc] init];
+    menuBackground.name = @"menuBackground";
+    
+    CGMutablePathRef myPath = CGPathCreateMutable();
+    CGPathAddRect(myPath, NULL, CGRectMake(0.0, 0.0, 100.0, 320.0));
+    menuBackground.path = myPath;
+    
+    menuBackground.lineWidth = 0.0;
+    menuBackground.fillColor = [SKColor grayColor];
+    menuBackground.strokeColor = [SKColor clearColor];
+    menuBackground.glowWidth = 0.0;
+    menuBackground.alpha = 0.5;
+    
+    SKAction *wait = [SKAction waitForDuration:1.0];
+    SKAction *snapToLeft = [SKAction moveToX:-100.0 duration:0.25];
+    SKAction *sequence = [SKAction sequence:@[wait, snapToLeft]];
+    [menuBackground runAction:sequence];
+    
+    SKSpriteNode *tower = [SKSpriteNode spriteNodeWithImageNamed:@"tower_one_0.gif"];
+    
+    tower.position = CGPointMake(menuBackground.frame.size.width / 2, menuBackground.frame.size.height - tower.frame.size.height);
+    
+    [menuBackground addChild:tower];
+    
+    [self addChild:menuBackground];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -78,7 +80,6 @@
     for (UITouch *touch in touches) {
         CGPoint location = [touch locationInNode:self];
 
-        SKSpriteNode *sprite = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship"];
         
         _previousTouchLocation = location;
     }
@@ -115,7 +116,7 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+    [_enemyManager updateAll];
 }
 
 //generatePath: Returns a randomly generated path (NSMutableArray) with MapLoc objects within.
