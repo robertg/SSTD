@@ -6,6 +6,10 @@
 #import "EnemyManager.h"
 #import "Enemy.h"
 
+@interface MapScene()
+@property BOOL contentCreated;
+@end
+
 @implementation MapScene
 
 {
@@ -14,6 +18,7 @@
     EnemyManager *_enemyManager;
 }
 
+<<<<<<< HEAD
 -(id)initWithSize:(CGSize)size {
     if (self = [super initWithSize:size]) {
         /* Setup your scene here */
@@ -49,8 +54,46 @@
         enemies: enemies width: size.width height: size.height framesWait: 20];
         
         [self generatePath];
+=======
+- (void)didMoveToView:(SKView *)view
+{
+    if (!self.contentCreated) {
+        [self createSceneContents];
+        self.contentCreated = YES;
+>>>>>>> 0ef556e2e416313f8bba0769578c7048f9292d11
     }
-    return self;
+}
+
+- (void)createSceneContents
+{
+    /* Setup your scene here */
+    //2
+    
+    //3
+    self.backgroundColor = [SKColor whiteColor];
+    
+    _world = [[TileWorld alloc] initWithMapfile:@"World1"];
+    [self addChild:_world];
+    
+    //Create space sprite, setup position on left edge centered on the screen, and add to Scene
+    //4
+    _ship = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship.png"];
+    
+    _ship.position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame));
+    
+    
+    
+    //Defining the behaviours
+    
+    SKAction *remove = [SKAction removeFromParent];
+    SKAction *zoom = [SKAction scaleTo: 0.1 duration: 0.10];
+    SKAction *right = [SKAction rotateByAngle:-M_PI/2 duration:0.5];
+    
+    SKAction *turnRight = [SKAction sequence:@[right]];
+    
+    
+    
+    [self generatePath];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -71,7 +114,11 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
+<<<<<<< HEAD
     [_enemyManager updateAll];
+=======
+    
+>>>>>>> 0ef556e2e416313f8bba0769578c7048f9292d11
 }
 
 //generatePath: Returns a randomly generated path (NSMutableArray) with MapLoc objects within.
