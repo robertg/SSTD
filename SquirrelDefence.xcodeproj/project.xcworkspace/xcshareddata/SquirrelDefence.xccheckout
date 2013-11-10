@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>09F9C7A1-C1FF-44BD-82B4-26A3C6383E9B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SquirrelDefence</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>89A85715-311D-4041-B6B8-7D44ED956607</key>
+		<string>https://github.com/rgawdzik/SSTD.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SquirrelDefence.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>89A85715-311D-4041-B6B8-7D44ED956607</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rgawdzik/SSTD.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>89A85715-311D-4041-B6B8-7D44ED956607</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>89A85715-311D-4041-B6B8-7D44ED956607</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SSTD</string>
+		</dict>
+	</array>
+</dict>
+</plist>

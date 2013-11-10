@@ -8,6 +8,6 @@
 
 #import <SpriteKit/SpriteKit.h>
 
-@interface SquirrelMyScene : SKScene
+@interface MapScene : SKScene
 
 @end
