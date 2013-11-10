@@ -16,6 +16,8 @@ static int MAP_WIDTH=17;
 - (id)initWithMapfile:(NSString*)f {
 	if ((self = [super init])) {
 		SKTextureAtlas * worldTextures = [SKTextureAtlas atlasNamed:@"World1"];
+        _tiles = [NSArray arrayWithContentsOfFile:@"World1"];
+        /*
 		_tiles = [NSMutableArray arrayWithCapacity:170];
 		Tile * tile;
 		for(int y=0;y<MAP_HEIGHT;y++){
@@ -31,6 +33,7 @@ static int MAP_WIDTH=17;
 				[_tiles insertObject:tile atIndex:(y*MAP_WIDTH +x)];
 			}
 		}
+         */
 	}
 	return self;
 }	

@@ -4,45 +4,54 @@
 #import "TileWorld.h"
 #import "MapLoc.h"
 
+@interface MapScene()
+@property BOOL contentCreated;
+@end
+
 @implementation MapScene
 {
     SKSpriteNode *_ship;  //1
 	TileWorld *_world;
 }
 
--(id)initWithSize:(CGSize)size {
-    if (self = [super initWithSize:size]) {
-        /* Setup your scene here */
-        //2
-        NSLog(@"SKScene:initWithSize %f x %f",size.width,size.height);
-        
-        //3
-        self.backgroundColor = [SKColor whiteColor];
-        
-		_world = [[TileWorld alloc] initWithMapfile:@"World1"];
-		[self addChild:_world];
-
-        //Create space sprite, setup position on left edge centered on the screen, and add to Scene
-        //4
-        _ship = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship.png"];
-
-        _ship.position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame));
-        
-        
-
-        //Defining the behaviours
-
-        SKAction *remove = [SKAction removeFromParent];
-        SKAction *zoom = [SKAction scaleTo: 0.1 duration: 0.10];
-        SKAction *right = [SKAction rotateByAngle:-M_PI/2 duration:0.5];
-
-        SKAction *turnRight = [SKAction sequence:@[right]];
-        
-        
-        
-        [self generatePath];
+- (void)didMoveToView:(SKView *)view
+{
+    if (!self.contentCreated) {
+        [self createSceneContents];
+        self.contentCreated = YES;
     }
-    return self;
+}
+
+- (void)createSceneContents
+{
+    /* Setup your scene here */
+    //2
+    
+    //3
+    self.backgroundColor = [SKColor whiteColor];
+    
+    _world = [[TileWorld alloc] initWithMapfile:@"World1"];
+    [self addChild:_world];
+    
+    //Create space sprite, setup position on left edge centered on the screen, and add to Scene
+    //4
+    _ship = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship.png"];
+    
+    _ship.position = CGPointMake(self.frame.size.width * 0.1, CGRectGetMidY(self.frame));
+    
+    
+    
+    //Defining the behaviours
+    
+    SKAction *remove = [SKAction removeFromParent];
+    SKAction *zoom = [SKAction scaleTo: 0.1 duration: 0.10];
+    SKAction *right = [SKAction rotateByAngle:-M_PI/2 duration:0.5];
+    
+    SKAction *turnRight = [SKAction sequence:@[right]];
+    
+    
+    
+    [self generatePath];
 }
 
 -(void)touchesBegan:(NSSet *)touches withEvent:(UIEvent *)event {
@@ -63,7 +72,7 @@
 }
 
 -(void)update:(CFTimeInterval)currentTime {
-    /* Called before each frame is rendered */
+    
 }
 
 //generatePath: Returns a randomly generated path (NSMutableArray) with MapLoc objects within.
