@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3940FAD7182F396300C74389 /* TitleScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 3940FAD6182F396300C74389 /* TitleScene.m */; };
 		7BE765FD182EFEEB00309681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FC182EFEEB00309681 /* Foundation.framework */; };
 		7BE765FF182EFEEB00309681 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FE182EFEEB00309681 /* CoreGraphics.framework */; };
 		7BE76601182EFEEB00309681 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE76600182EFEEB00309681 /* UIKit.framework */; };
@@ -25,6 +26,8 @@
 		7BE7662D182EFEEB00309681 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BE7662B182EFEEB00309681 /* InfoPlist.strings */; };
 		7BE7662F182EFEEB00309681 /* SquirrelDefenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */; };
 		8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71C9F182F190D007CB572 /* MapLoc.m */; };
+		8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CCD182F3C7A007CB572 /* Enemy.m */; };
+		8AD71CD1182F3DC9007CB572 /* EnemyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CD0182F3DC9007CB572 /* EnemyManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +41,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		3940FAD5182F396300C74389 /* TitleScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TitleScene.h; sourceTree = "<group>"; };
+		3940FAD6182F396300C74389 /* TitleScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TitleScene.m; sourceTree = "<group>"; };
 		7BE765F9182EFEEB00309681 /* SquirrelDefence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquirrelDefence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE765FC182EFEEB00309681 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BE765FE182EFEEB00309681 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -63,6 +68,10 @@
 		7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquirrelDefenceTests.m; sourceTree = "<group>"; };
 		8AD71C9E182F190D007CB572 /* MapLoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLoc.h; sourceTree = "<group>"; };
 		8AD71C9F182F190D007CB572 /* MapLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLoc.m; sourceTree = "<group>"; };
+		8AD71CCC182F3C7A007CB572 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
+		8AD71CCD182F3C7A007CB572 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
+		8AD71CCF182F3DC9007CB572 /* EnemyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyManager.h; sourceTree = "<group>"; };
+		8AD71CD0182F3DC9007CB572 /* EnemyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,11 +140,17 @@
 				7BE76614182EFEEB00309681 /* SquirrelViewController.m */,
 				7BE76616182EFEEB00309681 /* MapScene.h */,
 				7BE76617182EFEEB00309681 /* MapScene.m */,
+				3940FAD5182F396300C74389 /* TitleScene.h */,
+				3940FAD6182F396300C74389 /* TitleScene.m */,
 				7BE76619182EFEEB00309681 /* Spaceship.png */,
 				7BE7661B182EFEEB00309681 /* Images.xcassets */,
 				7BE76605182EFEEB00309681 /* Supporting Files */,
 				8AD71C9E182F190D007CB572 /* MapLoc.h */,
 				8AD71C9F182F190D007CB572 /* MapLoc.m */,
+				8AD71CCC182F3C7A007CB572 /* Enemy.h */,
+				8AD71CCD182F3C7A007CB572 /* Enemy.m */,
+				8AD71CCF182F3DC9007CB572 /* EnemyManager.h */,
+				8AD71CD0182F3DC9007CB572 /* EnemyManager.m */,
 			);
 			path = SquirrelDefence;
 			sourceTree = "<group>";
@@ -268,10 +283,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */,
 				7BE7660B182EFEEB00309681 /* main.m in Sources */,
 				7BE7660F182EFEEB00309681 /* SquirrelAppDelegate.m in Sources */,
 				7BE76615182EFEEB00309681 /* SquirrelViewController.m in Sources */,
+				3940FAD7182F396300C74389 /* TitleScene.m in Sources */,
 				7BE76618182EFEEB00309681 /* MapScene.m in Sources */,
+				8AD71CD1182F3DC9007CB572 /* EnemyManager.m in Sources */,
 				8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
