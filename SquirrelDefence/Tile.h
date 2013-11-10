@@ -4,6 +4,8 @@
 - (id)initWithTexture:(int)t
 	xpos:(int)x
 	ypos:(int)y;
+@property (readwrite) int texId;
+- (NSString*) getTexName;
 @end
 
 @interface BuildTile: Tile

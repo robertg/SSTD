@@ -26,8 +26,6 @@
 		7BE7662D182EFEEB00309681 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BE7662B182EFEEB00309681 /* InfoPlist.strings */; };
 		7BE7662F182EFEEB00309681 /* SquirrelDefenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */; };
 		7BE76654182F543900309681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FC182EFEEB00309681 /* Foundation.framework */; };
-		7BE76657182F543900309681 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE76656182F543900309681 /* main.m */; };
-		7BE7665B182F543900309681 /* LevelGen.1 in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7BE7665A182F543900309681 /* LevelGen.1 */; };
 		7BE7665F182F555F00309681 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CD3182F48F6007CB572 /* Tile.m */; };
 		8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71C9F182F190D007CB572 /* MapLoc.m */; };
 		8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CCD182F3C7A007CB572 /* Enemy.m */; };
@@ -54,7 +52,6 @@
 			dstPath = /usr/share/man/man1/;
 			dstSubfolderSpec = 0;
 			files = (
-				7BE7665B182F543900309681 /* LevelGen.1 in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
@@ -87,9 +84,6 @@
 		7BE7662C182EFEEB00309681 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquirrelDefenceTests.m; sourceTree = "<group>"; };
 		7BE76653182F543900309681 /* LevelGen */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = LevelGen; sourceTree = BUILT_PRODUCTS_DIR; };
-		7BE76656182F543900309681 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		7BE76659182F543900309681 /* LevelGen-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "LevelGen-Prefix.pch"; sourceTree = "<group>"; };
-		7BE7665A182F543900309681 /* LevelGen.1 */ = {isa = PBXFileReference; lastKnownFileType = text.man; path = LevelGen.1; sourceTree = "<group>"; };
 		8AD71C9E182F190D007CB572 /* MapLoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLoc.h; sourceTree = "<group>"; };
 		8AD71C9F182F190D007CB572 /* MapLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLoc.m; sourceTree = "<group>"; };
 		8AD71CCC182F3C7A007CB572 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
@@ -141,7 +135,6 @@
 			children = (
 				7BE76604182EFEEB00309681 /* SquirrelDefence */,
 				7BE76628182EFEEB00309681 /* SquirrelDefenceTests */,
-				7BE76655182F543900309681 /* LevelGen */,
 				7BE765FB182EFEEB00309681 /* Frameworks */,
 				7BE765FA182EFEEB00309681 /* Products */,
 			);
@@ -224,24 +217,6 @@
 			children = (
 				7BE7662A182EFEEB00309681 /* SquirrelDefenceTests-Info.plist */,
 				7BE7662B182EFEEB00309681 /* InfoPlist.strings */,
-			);
-			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7BE76655182F543900309681 /* LevelGen */ = {
-			isa = PBXGroup;
-			children = (
-				7BE76656182F543900309681 /* main.m */,
-				7BE7665A182F543900309681 /* LevelGen.1 */,
-				7BE76658182F543900309681 /* Supporting Files */,
-			);
-			path = LevelGen;
-			sourceTree = "<group>";
-		};
-		7BE76658182F543900309681 /* Supporting Files */ = {
-			isa = PBXGroup;
-			children = (
-				7BE76659182F543900309681 /* LevelGen-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -389,7 +364,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7BE76657182F543900309681 /* main.m in Sources */,
 				7BE7665F182F555F00309681 /* Tile.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -640,6 +614,7 @@
 				7BE7665E182F543900309681 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
