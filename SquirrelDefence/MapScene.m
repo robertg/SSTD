@@ -19,7 +19,7 @@
         //3
         self.backgroundColor = [SKColor whiteColor];
         
-		_world = [TileWorld init];
+		_world = [[TileWorld alloc] initWithMapfile:@"World1"];
 		[self addChild:_world];
 
         //Create space sprite, setup position on left edge centered on the screen, and add to Scene
