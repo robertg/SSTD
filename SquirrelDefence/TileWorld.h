@@ -1,5 +1,5 @@
 #import <SpriteKit/SpriteKit.h>
 
-@interface TileWorld: SKSpriteNode
+@interface TileWorld: SKNode
 - (id)initWithMapfile:(NSString *)file;
 @end
