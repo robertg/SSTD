@@ -62,7 +62,7 @@
     [menuBackground addChild:tower];
     
     MapLoc* loc = [[self generatePath] objectAtIndex:0];
-    Enemy* e1 = [[Enemy alloc] initWithSpeed:1.0f type:1 pos: CGPointMake(0,0) textureloc: @"Spaceship.png" ];
+    Enemy* e1 = [[Enemy alloc] initWithSpeed:1.0f health:20 pos: CGPointMake(0,0) textureloc: @"Spaceship.png" ];
     [self addChild:e1];
     
     NSMutableArray* enemies = [[NSMutableArray alloc] initWithObjects:e1, nil];

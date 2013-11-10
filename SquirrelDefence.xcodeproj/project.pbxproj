@@ -11,6 +11,7 @@
 		3940FAE2182F6CC000C74389 /* tower_one_0.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3940FAE0182F6CC000C74389 /* tower_one_0.gif */; };
 		3940FAE3182F6CC000C74389 /* tower_one_0@2x.gif in Resources */ = {isa = PBXBuildFile; fileRef = 3940FAE1182F6CC000C74389 /* tower_one_0@2x.gif */; };
 		7BA76D9C182F88A6008F18A9 /* World1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 7BA76D9B182F88A6008F18A9 /* World1.txt */; };
+		7BA76DA0182F9B4E008F18A9 /* Building.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76D9F182F9B4E008F18A9 /* Building.m */; };
 		7BE765FD182EFEEB00309681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FC182EFEEB00309681 /* Foundation.framework */; };
 		7BE765FF182EFEEB00309681 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FE182EFEEB00309681 /* CoreGraphics.framework */; };
 		7BE76601182EFEEB00309681 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE76600182EFEEB00309681 /* UIKit.framework */; };
@@ -52,6 +53,9 @@
 		3940FAE0182F6CC000C74389 /* tower_one_0.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tower_one_0.gif; sourceTree = "<group>"; };
 		3940FAE1182F6CC000C74389 /* tower_one_0@2x.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = "tower_one_0@2x.gif"; sourceTree = "<group>"; };
 		7BA76D9B182F88A6008F18A9 /* World1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = World1.txt; sourceTree = "<group>"; };
+		7BA76D9D182F9518008F18A9 /* damage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = damage.h; sourceTree = "<group>"; };
+		7BA76D9E182F9B4E008F18A9 /* Building.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Building.h; sourceTree = "<group>"; };
+		7BA76D9F182F9B4E008F18A9 /* Building.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Building.m; sourceTree = "<group>"; };
 		7BE765F9182EFEEB00309681 /* SquirrelDefence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquirrelDefence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE765FC182EFEEB00309681 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BE765FE182EFEEB00309681 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -173,6 +177,9 @@
 				8AD71CCD182F3C7A007CB572 /* Enemy.m */,
 				8AD71CCF182F3DC9007CB572 /* EnemyManager.h */,
 				8AD71CD0182F3DC9007CB572 /* EnemyManager.m */,
+				7BA76D9D182F9518008F18A9 /* damage.h */,
+				7BA76D9E182F9B4E008F18A9 /* Building.h */,
+				7BA76D9F182F9B4E008F18A9 /* Building.m */,
 			);
 			path = SquirrelDefence;
 			sourceTree = "<group>";
@@ -311,6 +318,7 @@
 			files = (
 				8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */,
 				8AD71CD6182F48F6007CB572 /* Tile.m in Sources */,
+				7BA76DA0182F9B4E008F18A9 /* Building.m in Sources */,
 				8AD71CD7182F48F6007CB572 /* TileWorld.m in Sources */,
 				7BE7660B182EFEEB00309681 /* main.m in Sources */,
 				7BE7660F182EFEEB00309681 /* SquirrelAppDelegate.m in Sources */,

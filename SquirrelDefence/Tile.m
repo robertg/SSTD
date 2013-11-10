@@ -11,14 +11,21 @@
         self.texId = t;
 	}
 	return self;
-}- (NSString*)getTexName{
+}
+- (NSString*)getTexName{
     return @"none";
+}
+- (BOOL) canBuildHere{
+    return NO;
 }
 @end
 
 @implementation BuildTile
 - (NSString*)getTexName{
     return @"build";
+}
+- (BOOL) canBuildHere{
+    return Yes;//TODO: FIX THIS
 }
 @end
 
@@ -42,5 +49,8 @@
 }
 - (NSString*)getTexName{
     return @"path";
+}
+- (BOOL) canBuildHere{
+    return NO;
 }
 @end
