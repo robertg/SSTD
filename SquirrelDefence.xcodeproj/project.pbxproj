@@ -17,6 +17,7 @@
 		7BA76DA6182FD927008F18A9 /* BuildingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76DA5182FD927008F18A9 /* BuildingManager.m */; };
 		7BA76DA9182FE039008F18A9 /* GenericAndUselessBuilding.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76DA8182FE039008F18A9 /* GenericAndUselessBuilding.m */; };
 		7BA76DAC182FF5D1008F18A9 /* DFTurret.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76DAB182FF5D1008F18A9 /* DFTurret.m */; };
+		7BA76DB01830187C008F18A9 /* GameoverScene.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BA76DAF1830187C008F18A9 /* GameoverScene.m */; };
 		7BE765FD182EFEEB00309681 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FC182EFEEB00309681 /* Foundation.framework */; };
 		7BE765FF182EFEEB00309681 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE765FE182EFEEB00309681 /* CoreGraphics.framework */; };
 		7BE76601182EFEEB00309681 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE76600182EFEEB00309681 /* UIKit.framework */; };
@@ -34,6 +35,7 @@
 		7BE76625182EFEEB00309681 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BE76600182EFEEB00309681 /* UIKit.framework */; };
 		7BE7662D182EFEEB00309681 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7BE7662B182EFEEB00309681 /* InfoPlist.strings */; };
 		7BE7662F182EFEEB00309681 /* SquirrelDefenceTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */; };
+		8A9DB2CF1830183B000BFE8C /* InfoLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A9DB2CE1830183B000BFE8C /* InfoLayer.m */; };
 		8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71C9F182F190D007CB572 /* MapLoc.m */; };
 		8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CCD182F3C7A007CB572 /* Enemy.m */; };
 		8AD71CD1182F3DC9007CB572 /* EnemyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CD0182F3DC9007CB572 /* EnemyManager.m */; };
@@ -71,6 +73,8 @@
 		7BA76DA8182FE039008F18A9 /* GenericAndUselessBuilding.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GenericAndUselessBuilding.m; sourceTree = "<group>"; };
 		7BA76DAA182FF5D1008F18A9 /* DFTurret.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DFTurret.h; sourceTree = "<group>"; };
 		7BA76DAB182FF5D1008F18A9 /* DFTurret.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DFTurret.m; sourceTree = "<group>"; };
+		7BA76DAE1830187C008F18A9 /* GameoverScene.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GameoverScene.h; sourceTree = "<group>"; };
+		7BA76DAF1830187C008F18A9 /* GameoverScene.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GameoverScene.m; sourceTree = "<group>"; };
 		7BE765F9182EFEEB00309681 /* SquirrelDefence.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SquirrelDefence.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7BE765FC182EFEEB00309681 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		7BE765FE182EFEEB00309681 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -94,6 +98,8 @@
 		7BE7662A182EFEEB00309681 /* SquirrelDefenceTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SquirrelDefenceTests-Info.plist"; sourceTree = "<group>"; };
 		7BE7662C182EFEEB00309681 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7BE7662E182EFEEB00309681 /* SquirrelDefenceTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SquirrelDefenceTests.m; sourceTree = "<group>"; };
+		8A9DB2CD1830183B000BFE8C /* InfoLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoLayer.h; sourceTree = "<group>"; };
+		8A9DB2CE1830183B000BFE8C /* InfoLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoLayer.m; sourceTree = "<group>"; };
 		8AD71C9E182F190D007CB572 /* MapLoc.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapLoc.h; sourceTree = "<group>"; };
 		8AD71C9F182F190D007CB572 /* MapLoc.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapLoc.m; sourceTree = "<group>"; };
 		8AD71CCC182F3C7A007CB572 /* Enemy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Enemy.h; sourceTree = "<group>"; };
@@ -199,6 +205,8 @@
 				3940FAE5182FA8EC00C74389 /* MenuLayer.m */,
 				3940FAD5182F396300C74389 /* TitleScene.h */,
 				3940FAD6182F396300C74389 /* TitleScene.m */,
+				7BA76DAE1830187C008F18A9 /* GameoverScene.h */,
+				7BA76DAF1830187C008F18A9 /* GameoverScene.m */,
 				7BE76619182EFEEB00309681 /* Spaceship.png */,
 				7BE7661B182EFEEB00309681 /* Images.xcassets */,
 				7BE76605182EFEEB00309681 /* Supporting Files */,
@@ -213,6 +221,8 @@
 				7BA76DA2182FD097008F18A9 /* Player.m */,
 				7BA76DA4182FD927008F18A9 /* BuildingManager.h */,
 				7BA76DA5182FD927008F18A9 /* BuildingManager.m */,
+				8A9DB2CD1830183B000BFE8C /* InfoLayer.h */,
+				8A9DB2CE1830183B000BFE8C /* InfoLayer.m */,
 			);
 			path = SquirrelDefence;
 			sourceTree = "<group>";
@@ -360,8 +370,10 @@
 				7BE7660B182EFEEB00309681 /* main.m in Sources */,
 				7BE7660F182EFEEB00309681 /* SquirrelAppDelegate.m in Sources */,
 				7BE76615182EFEEB00309681 /* SquirrelViewController.m in Sources */,
+				7BA76DB01830187C008F18A9 /* GameoverScene.m in Sources */,
 				3940FAD7182F396300C74389 /* TitleScene.m in Sources */,
 				7BE76618182EFEEB00309681 /* MapScene.m in Sources */,
+				8A9DB2CF1830183B000BFE8C /* InfoLayer.m in Sources */,
 				8AD71CD1182F3DC9007CB572 /* EnemyManager.m in Sources */,
 				8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */,
 				7BA76DA9182FE039008F18A9 /* GenericAndUselessBuilding.m in Sources */,

@@ -28,7 +28,7 @@
 }
 -(BOOL)update:(NSMutableArray*)path{
     if (_health<0){//dead
-        [Player getPlayer].money+=100;
+        [Player getPlayer].money+=25;
         SKSpriteNode * corpse = [self copy];
         corpse.zPosition = -1.0;
         
@@ -48,7 +48,7 @@
     if(distSquared<(_speed*_speed)){//close enough to next waypoint, snap to it
         _pathpos++;
         if (_pathpos>=[path count]) {//end of path
-            [Player getPlayer].health -=5;
+            [Player getPlayer].health -= 5;
             return NO;
         }
         self.position = CGPointMake(target.X*32.0+16.0, target.Y*32.0+16.0);

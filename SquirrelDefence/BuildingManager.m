@@ -36,11 +36,13 @@ static BuildingManager * instance = nil;
 }
 - (void)addBuilding:(Building *)b X:(int)x Y:(int)y{
     Tile *t = [[TileWorld getInstance] getTileX:x Y:y];
-    if ([t isKindOfClass:[BuildTile class]]&&![(BuildTile*)t building]){
+    Player* currentPlayer = [Player getPlayer];
+    if ([t isKindOfClass:[BuildTile class]] && ![(BuildTile*)t building] && currentPlayer.money - 100 >= 0){
         [(BuildTile*)t setBuilding:b];
         [_buildings addObject:b];
         b.position = CGPointMake(32*x+16, 32*y+16);
         [self addChild:b];
+        currentPlayer.money -= 100;
     }
 }
 - (void)destroyBuildingX:(int)x Y:(int)y{
