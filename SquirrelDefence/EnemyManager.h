@@ -16,7 +16,7 @@
 //Methods:
 
 //Constructor:
--(id) init: (NSMutableArray*)path;
+-(id) initPath: (NSMutableArray*)path;
 
 -(void) createEnemy;
 

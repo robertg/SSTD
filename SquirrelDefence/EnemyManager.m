@@ -8,7 +8,7 @@
     NSMutableArray* _path;
 }
 
--(id) init:(NSMutableArray *)path {
+-(id) initPath:(NSMutableArray *)path {
     
     _path = path;
     if (self = [super init]) {
@@ -19,7 +19,7 @@
 }
 
 -(void) createEnemy {
-    [_Enemies addObject:[[Enemy alloc] init]];
+    
 }
 
 @end
