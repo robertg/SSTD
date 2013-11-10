@@ -10,5 +10,6 @@
 @end
 
 @interface PathTile: Tile
+@property (readwrite) int nextTile;
 @end
 

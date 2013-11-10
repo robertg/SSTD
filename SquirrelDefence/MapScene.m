@@ -1,11 +1,13 @@
 
 //Header files:
 #import "MapScene.h"
+#import "TileWorld.h"
 #import "MapLoc.h"
 
 @implementation MapScene
 {
     SKSpriteNode *_ship;  //1
+	TileWorld *_world;
 }
 
 -(id)initWithSize:(CGSize)size {
@@ -17,6 +19,9 @@
         //3
         self.backgroundColor = [SKColor whiteColor];
         
+		self._world = [TileWorld init];
+		[self addChild:_world]
+
         //Create space sprite, setup position on left edge centered on the screen, and add to Scene
         //4
         _ship = [SKSpriteNode spriteNodeWithImageNamed:@"Spaceship.png"];
