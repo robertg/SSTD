@@ -7,7 +7,7 @@
 	ypos:(int)y;
 @property (readwrite) int texId;
 - (NSString*) getTexName;
-- (bool) canBuildHere;
+- (BOOL) canBuildHere;
 @end
 
 @interface BuildTile: Tile
