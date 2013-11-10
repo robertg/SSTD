@@ -28,6 +28,9 @@
 		8AD71CA0182F190D007CB572 /* MapLoc.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71C9F182F190D007CB572 /* MapLoc.m */; };
 		8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CCD182F3C7A007CB572 /* Enemy.m */; };
 		8AD71CD1182F3DC9007CB572 /* EnemyManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CD0182F3DC9007CB572 /* EnemyManager.m */; };
+		8AD71CD6182F48F6007CB572 /* Tile.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CD3182F48F6007CB572 /* Tile.m */; };
+		8AD71CD7182F48F6007CB572 /* TileWorld.m in Sources */ = {isa = PBXBuildFile; fileRef = 8AD71CD5182F48F6007CB572 /* TileWorld.m */; };
+		8AD71CD9182F4900007CB572 /* World1.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 8AD71CD8182F4900007CB572 /* World1.atlas */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -72,6 +75,11 @@
 		8AD71CCD182F3C7A007CB572 /* Enemy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Enemy.m; sourceTree = "<group>"; };
 		8AD71CCF182F3DC9007CB572 /* EnemyManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EnemyManager.h; sourceTree = "<group>"; };
 		8AD71CD0182F3DC9007CB572 /* EnemyManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EnemyManager.m; sourceTree = "<group>"; };
+		8AD71CD2182F48F6007CB572 /* Tile.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Tile.h; sourceTree = "<group>"; };
+		8AD71CD3182F48F6007CB572 /* Tile.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Tile.m; sourceTree = "<group>"; };
+		8AD71CD4182F48F6007CB572 /* TileWorld.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TileWorld.h; sourceTree = "<group>"; };
+		8AD71CD5182F48F6007CB572 /* TileWorld.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TileWorld.m; sourceTree = "<group>"; };
+		8AD71CD8182F4900007CB572 /* World1.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = World1.atlas; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -133,6 +141,11 @@
 		7BE76604182EFEEB00309681 /* SquirrelDefence */ = {
 			isa = PBXGroup;
 			children = (
+				8AD71CD8182F4900007CB572 /* World1.atlas */,
+				8AD71CD2182F48F6007CB572 /* Tile.h */,
+				8AD71CD3182F48F6007CB572 /* Tile.m */,
+				8AD71CD4182F48F6007CB572 /* TileWorld.h */,
+				8AD71CD5182F48F6007CB572 /* TileWorld.m */,
 				7BE7660D182EFEEB00309681 /* SquirrelAppDelegate.h */,
 				7BE7660E182EFEEB00309681 /* SquirrelAppDelegate.m */,
 				7BE76610182EFEEB00309681 /* Main.storyboard */,
@@ -264,6 +277,7 @@
 				7BE76609182EFEEB00309681 /* InfoPlist.strings in Resources */,
 				7BE7661C182EFEEB00309681 /* Images.xcassets in Resources */,
 				7BE7661A182EFEEB00309681 /* Spaceship.png in Resources */,
+				8AD71CD9182F4900007CB572 /* World1.atlas in Resources */,
 				7BE76612182EFEEB00309681 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -284,6 +298,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				8AD71CCE182F3C7A007CB572 /* Enemy.m in Sources */,
+				8AD71CD6182F48F6007CB572 /* Tile.m in Sources */,
+				8AD71CD7182F48F6007CB572 /* TileWorld.m in Sources */,
 				7BE7660B182EFEEB00309681 /* main.m in Sources */,
 				7BE7660F182EFEEB00309681 /* SquirrelAppDelegate.m in Sources */,
 				7BE76615182EFEEB00309681 /* SquirrelViewController.m in Sources */,

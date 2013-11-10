@@ -5,9 +5,9 @@
 - (id)initWithTexture:(SKTexture *)t
 	xpos:(int)x
 	ypos:(int)y{
-	if((self = [super initWithTexture:t]){
-		[self anchorPoint:CGPointMake(0.0,0.0)]
-		[self position:CGPointMake(x*32.0,y*32.0)]	
+	if((self = [super initWithTexture:t])){
+        self.anchorPoint = CGPointMake(0.0,0.0);
+        self.position = CGPointMake(x*32.0,y*32.0);
 	}
 	return self;
 }

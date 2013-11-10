@@ -13,19 +13,19 @@
 static int MAP_HEIGHT=10;
 static int MAP_WIDTH=17;
 
-+ (id)initWithMapfile:(NSString*)m {
+- (id)initWithMapfile:(NSString*)m {
 	if ((self = [super init])) {
 		SKTextureAtlas * worldTextures = [SKTextureAtlas atlasNamed:@"World1"];
-		tiles = [NSMutableArray arrayWithCapacity:170];
+		_tiles = [NSMutableArray arrayWithCapacity:170];
 		Tile * tile;
 		for(int y=0;y<MAP_HEIGHT;y++){
 			for(int x=0;x<MAP_WIDTH;x++){
 				if(y==3){
-					tile = [PathTile initWithTexture:[worldTextures textureNamed:"path00"]
+					tile = [[PathTile alloc] initWithTexture:[worldTextures textureNamed:@"path00"]
 							x: x y: y];
-					[tile setNextTile:(y*MAP_WIDTH +x+1)]//set next node to next in chain
+					[(PathTile*)tile setNextTile:(y*MAP_WIDTH +x+1)];//set next node to next in chain
 				} else {
-					tile = [BuildTile initWithTexture:[worldTextures textureNamed:"build00"]
+					tile = [[BuildTile alloc] initWithTexture:[worldTextures textureNamed:@"build00"]
 							x: x y: y];
 				}
 				[self addChild:tile]
