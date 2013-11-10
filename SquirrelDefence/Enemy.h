@@ -1,14 +1,15 @@
 #import <SpriteKit/SpriteKit.h>
 
-@interface Enemy : SKSpriteNode
+@interface Enemy : SKSpriteNode {
+    float _speed;
+    int _enemyType;
+}
 
 //Enemy Properties:
-@property float Speed;
-@property CGPoint Position;
-@property int Enemy_type;
-@property SKTexture* Texture;
+@property float speed;
+@property int enemyType;
 
--(id) init: (float) speed
+-(id) initWithSpeed: (float) speed
       type: (int)type
       pos:  (CGPoint)position
       textureloc: (NSString*)textloc;
